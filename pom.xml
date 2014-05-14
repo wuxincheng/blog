@@ -4,10 +4,10 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.wuxincheng</groupId>
-	<artifactId>picblog</artifactId>
+	<artifactId>blog</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
-	<name>picblog Maven Webapp</name>
+	<name>blog Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	
 	<properties>
@@ -278,7 +278,7 @@
 	</dependencies>
 	
 	<build>
-		<finalName>wuxincheng-blog</finalName>
+		<finalName>blog</finalName>
 		
 		<pluginManagement>
 			<plugins>

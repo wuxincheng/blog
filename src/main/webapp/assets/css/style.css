@@ -1808,3 +1808,12 @@ hr{
 	margin: 50px auto 70px auto;
 	line-height: 30px;
 }
+
+.left-info-d {
+	color: #fff;
+	border-color: #ebccd1;
+	padding: 5px 1px 5px 1px;
+	margin: 20px 0px 20px 0px;
+	line-height: 10px;
+	border-top: 1px solid #F0F0F0;
+}

@@ -21,10 +21,10 @@
 						<ul class="nav navbar-nav navbar-right">
 							<li class="dropdown">
 							  <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">
-							  	<img alt="" src="./assets/img/wuxc.jpg" height="23px" width="23px">
+							  	<img alt="" src="./assets/img/wuxc.jpg" height="23px" width="23px" class="img-circle">
 							  <b class="caret"></b></a>
 							  <ul class="dropdown-menu">
-							    <li><a href="#"><i class="fa fa-user"></i> 新成微博</a></li>
+							    <li><a href="#"><img alt="" src="./assets/img/wuxc.jpg" class="img-circle">&nbsp;&nbsp;吴新成</a></li>
 							    <li class="divider"></li>
 							    <li><a href="#">新浪微博</a></li>
 							    <li><a href="#">腾讯微博</a></li>
