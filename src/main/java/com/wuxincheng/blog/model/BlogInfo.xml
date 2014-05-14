@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="BlogInfo">
+	<typeAlias alias="BlogInfo" type="com.wuxincheng.blog.model.BlogInfo" />
+
+	<resultMap class="BlogInfo" id="BlogInfoMapping">
+		<result property="blogId" column="BLOG_ID" />
+		<result property="blogTitle" column="BLOG_TITLE" />
+		<result property="blogContent" column="BLOG_CONTENT" />
+		<result property="blogTime" column="CREATE_TIME" />
+		<result property="picLink" column="PIC_LINK" />
+		<result property="subContent" column="SUB_CONTENT" />
+		<result property="blogTypeName" column="TYPE_NAME" />
+		<result property="readCount" column="READE_COUNT" />
+		<result property="shareCount" column="SHARE_COUNT" />
+	</resultMap>
+	
+	<select id="queryAll" parameterClass="java.lang.String" resultMap="BlogInfoMapping">
+		SELECT 
+			i.BLOG_ID, i.BLOG_TITLE, i.BLOG_CONTENT, i.SUB_CONTENT, 
+			DATE_FORMAT(i.CREATE_TIME,'%Y-%m-%d %H:%i:%S') AS CREATE_TIME, 
+			i.PIC_LINK, t.TYPE_NAME, i.SHARE_COUNT, i.READE_COUNT
+		FROM T_BLOG_DETAIL_INFO i 
+			LEFT JOIN T_BLOG_TYPE t ON i.BLOG_TYPE = t.TYPE_ID
+		ORDER BY i.CREATE_TIME
+	</select>
+	
+	<select id="queryByBlogId" parameterClass="java.lang.String" resultMap="BlogInfoMapping">
+		SELECT 
+			i.BLOG_ID, i.BLOG_TITLE, i.BLOG_CONTENT, i.SUB_CONTENT, 
+			DATE_FORMAT(i.CREATE_TIME,'%Y-%m-%d %H:%i:%S') AS CREATE_TIME, 
+			i.PIC_LINK, t.TYPE_NAME, i.SHARE_COUNT, i.READE_COUNT
+		FROM T_BLOG_DETAIL_INFO i 
+			LEFT JOIN T_BLOG_TYPE t ON i.BLOG_TYPE = t.TYPE_ID
+		WHERE i.BLOG_ID = #blogId#
+	</select>
+	
+</sqlMap>
