@@ -12,20 +12,16 @@
 						</button>
 					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav navbar-left">
-							<li class="active"><a href="http://responsivewebinc.com/premium/charlie111/#home">首页</a></li>
-							<li class=""><a href="http://responsivewebinc.com/premium/charlie111/#home">联系方式</a></li>
-							<li class=""><a href="http://responsivewebinc.com/premium/charlie111/#home">给我留言</a></li>
-							<li class=""><a href="http://responsivewebinc.com/premium/charlie111/#home">更新日志</a></li>
-							<li class=""><a href="http://responsivewebinc.com/premium/charlie111/#home">关于网站</a></li>
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="<%=request.getContextPath()%>/blog/list">首页</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="dropdown">
 							  <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">
-							  	<img alt="" src="./assets/img/wuxc.jpg" height="23px" width="23px" class="img-circle">
+							  	<img alt="" src="<%=request.getContextPath()%>/assets/img/wuxc.jpg" height="23px" width="23px" class="img-circle">
 							  <b class="caret"></b></a>
 							  <ul class="dropdown-menu">
-							    <li><a href="#"><img alt="" src="./assets/img/wuxc.jpg" class="img-circle">&nbsp;&nbsp;吴新成</a></li>
+							    <li><a href="#"><img alt="" src="<%=request.getContextPath()%>/assets/img/wuxc.jpg" class="img-circle">&nbsp;&nbsp;吴新成</a></li>
 							    <li class="divider"></li>
 							    <li><a href="#">新浪微博</a></li>
 							    <li><a href="#">腾讯微博</a></li>

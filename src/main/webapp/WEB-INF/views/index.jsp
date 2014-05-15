@@ -21,7 +21,9 @@
 		
 		<div class="container">
 			<div class="ya2dan-top-container">
-		        <div class="alert alert-ya2danmsg"><strong>平台通知：</strong> 网站平台将于2014-05-20 21:00更新，感谢网友的支持！</div>
+		        <div class="alert alert-info">
+					<strong>平台通知：</strong> 网站平台将于2014-05-20 21:00更新，感谢网友的支持！
+				</div>
 	        </div>
 		</div>
 		
@@ -29,27 +31,29 @@
 			<section id="blog">
 				<div class="blog padd">
 					<div class="container">
+						<c:choose>
+						<c:when test="${not empty blogInfos}">
 						<div id="container" class="grid" style="position: relative;">
-							<c:forEach var="i" begin="1" end="15" step="1">
+							<c:forEach items="${blogInfos}" var="blogInfo" varStatus="s">
 							<div class="item">
 								<div class="grid-entry">
 									<div class="entry-info">
-										<h5><a href="#">移动支付帝国战：谷歌、苹果、Facebook、亚马逊孰胜孰负？</a></h5>
+										<h5><a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}">${blogInfo.blogTitle}</a></h5>
 										<div class="spt">
-											<i class="fa fa-bookmark"></i> 新闻 &nbsp;&nbsp;&nbsp;&nbsp;
-											<i class="fa fa-calendar"></i> 2014-05-13 23:35:01
+											<i class="fa fa-bookmark"></i> ${blogInfo.blogTypeName} &nbsp;&nbsp;&nbsp;&nbsp;
+											<i class="fa fa-calendar"></i> ${blogInfo.blogTime}
 										</div>
 									</div>
 									<div class="grid-img">
-										<a href="">
-											<img src="./assets/images/${i}.jpg" class="img-responsive" alt="">
+										<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}">
+											<img src="${blogInfo.picLink}" class="img-responsive" alt="">
 										</a>
 									</div>
 									<div class="entry-info">
 										<!-- Paragraph -->
-										<div class="sp">移动支付这块蛋糕引得众人觊觎，Google Play服务不动声色地将Android打造成为现实世界的购物平台，iOS慢一拍，亚马逊完全依赖平台，Facebook广告满天飞。营销方式含蓄、应用数量惊人，Google这场仗赢得漂亮。</div>
-										<a href="#" class="read-more">
-											<button type="button" class="btn btn-danger btn-xs">阅读详细</button> 
+										<div class="sp">${blogInfo.subContent}</div>
+										<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" class="read-more">
+											<button type="button" class="btn btn-danger btn-sm">阅读详细</button> 
 											<i class="fa fa-angle-double-right"></i>
 										</a>
 									</div>
@@ -57,23 +61,24 @@
 							</div>
 							</c:forEach>
 						</div>
+						</c:when>
+						<c:otherwise>
+						<div class="ya2dan-container">
+							<div class="alert alert-warning">
+								<strong>提示：</strong>系统没有查询到博客信息
+							</div>
+						</div>
+						</c:otherwise>
+						</c:choose>
 					</div>
 				</div>
 			</section>
 			
 			<div class="container">
 				<div class="ya2dan-container">
-			        <button type="button" class="btn btn-danger btn-xs btn-block">加载更多</button>
+			        <button type="button" class="btn btn-danger btn-block">点击加载更多</button>
 		        </div>
 			</div>
-		</div>
-		
-		<div class="container">
-			<div class="ya2dan-container">
-				<div class="badger-left badger-notice" data-badger="网站公告（Notice for all）">
-		        	<h6>网站平台将于2014-05-20 21:00更新，感谢网友的支持！</h6>
-		        </div>
-	        </div>
 		</div>
 		
 		<jsp:include page="footer.jsp" />

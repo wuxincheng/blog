@@ -4,11 +4,9 @@
 <sqlMapConfig>
 	<settings useStatementNamespaces="true" />
 	
-	<!-- 
 	<sqlMap resource="com/wuxincheng/blog/model/BlogInfo.xml" />
 	<sqlMap resource="com/wuxincheng/blog/model/Type.xml" />
 	<sqlMap resource="com/wuxincheng/blog/model/User.xml" />
 	<sqlMap resource="com/wuxincheng/blog/model/Message.xml" />
-	 -->
 	
 </sqlMapConfig>
