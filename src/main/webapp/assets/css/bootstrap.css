@@ -631,9 +631,9 @@ abbr[data-original-title] {
 }
 blockquote {
   padding: 10px 20px;
-  margin: 0 0 20px;
+  margin: 10px 0px 20px 0px;
   font-size: 17.5px;
-  border-left: 5px solid #eee;
+  border-left: 5px solid #f75353;
 }
 blockquote p:last-child,
 blockquote ul:last-child,
@@ -4267,7 +4267,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  border-radius: .25em;
 }
 .label[href]:hover,
 .label[href]:focus {

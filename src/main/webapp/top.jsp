@@ -16,6 +16,7 @@
 							<li class="active"><a href="http://responsivewebinc.com/premium/charlie111/#home">首页</a></li>
 							<li class=""><a href="http://responsivewebinc.com/premium/charlie111/#home">联系方式</a></li>
 							<li class=""><a href="http://responsivewebinc.com/premium/charlie111/#home">给我留言</a></li>
+							<li class=""><a href="http://responsivewebinc.com/premium/charlie111/#home">更新日志</a></li>
 							<li class=""><a href="http://responsivewebinc.com/premium/charlie111/#home">关于网站</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
