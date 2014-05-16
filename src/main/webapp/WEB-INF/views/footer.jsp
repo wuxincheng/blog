@@ -6,7 +6,7 @@
 				<!-- Footer Copyright -->
 				<div class="copyright">
 					<!-- Paragraph -->
-					<p>© Copyright 2014 - <a href="http://responsivewebinc.com/premium/charlie111/#">wuxincheng.com.cn</a> - All Rights Reserved.</p>
+					<p>© Copyright 2014 - <a href="http://wuxincheng.com.cn">wuxincheng.com.cn</a> - All Rights Reserved.</p>
 				</div>
 			</div>
 		</div>
@@ -40,7 +40,6 @@
 		<script src="<%=request.getContextPath()%>/assets/js/respond.min.js"></script>
 		<script src="<%=request.getContextPath()%>/assets/js/html5shiv.js"></script>	
 		<script src="<%=request.getContextPath()%>/assets/js/custom.js"></script>
-		<script src="<%=request.getContextPath()%>/assets/js/bootstrap-hover-dropdown.js"></script>
 		<script>
 			// very simple to use!
 			$(document).ready(function() {

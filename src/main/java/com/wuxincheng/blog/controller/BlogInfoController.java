@@ -17,6 +17,7 @@ import com.wuxincheng.blog.model.BlogInfo;
 import com.wuxincheng.blog.model.Type;
 import com.wuxincheng.blog.service.BlogInfoService;
 import com.wuxincheng.blog.service.TypeService;
+import com.wuxincheng.blog.util.Constants;
 
 @Controller
 @RequestMapping("/blog")
@@ -43,6 +44,8 @@ public class BlogInfoController {
 		
 		request.getSession().setAttribute("types", types);
 		
+		model.addAttribute(Constants.TOP_NAV_FLAG, "index");
+		
 		return "index";
 	}
 	
@@ -51,13 +54,15 @@ public class BlogInfoController {
 		logger.info("查询博客详细信息");
 		
 		if (StringUtils.isEmpty(blogId)) {
-			
+			return "404";
 		} else {
 			BlogInfo blogInfo = null;
 			
 			blogInfo = blogInfoService.queryByBlogId(blogId);
-			
-			logger.info("查询到博客信息 blogInfo: " + blogInfo.toString());
+
+			if (null == blogInfo) {
+				return "404";
+			}
 			
 			model.addAttribute("blogInfo", blogInfo);
 		}

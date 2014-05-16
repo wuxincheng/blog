@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 	
 		<div class="header">
 			<nav class="navbar" role="navigation">
@@ -13,24 +14,23 @@
 					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="<%=request.getContextPath()%>/blog/list">首页</a></li>
+							<li <c:if test="${'index' eq navFlag}">class="active"</c:if>><a href="<%=request.getContextPath()%>/blog/list">首页</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="dropdown">
-							  <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">
+							  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							  	<img alt="" src="<%=request.getContextPath()%>/assets/img/wuxc.jpg" height="23px" width="23px" class="img-circle">
 							  <b class="caret"></b></a>
 							  <ul class="dropdown-menu">
 							    <li><a href="#"><img alt="" src="<%=request.getContextPath()%>/assets/img/wuxc.jpg" class="img-circle">&nbsp;&nbsp;吴新成</a></li>
 							    <li class="divider"></li>
-							    <li><a href="#">新浪微博</a></li>
-							    <li><a href="#">腾讯微博</a></li>
-							    <li><a href="#">QQ空间</a></li>
+							    <li><a href="http://weibo.com/ya2dan" target="blank">新浪微博</a></li>
+							    <li><a href="http://t.qq.com/wu_xincheng" target="blank">腾讯微博</a></li>
+							    <li><a href="http://user.qzone.qq.com/728498699" target="blank">QQ空间</a></li>
 							    <li class="divider"></li>
-							    <li><a href="#">Google+</a></li>
-							    <li><a href="#">Facebook</a></li>
-							    <li><a href="#">Twitter</a></li>
-							    <li><a href="#">LinkedIn</a></li>
+							    <li><a href="https://plus.google.com/+XinChengWu" target="blank">Google+</a></li>
+							    <li><a href="https://www.facebook.com/wxcking" target="blank">Facebook</a></li>
+							    <li><a href="https://twitter.com/wuxincheng" target="blank">Twitter</a></li>
 							  </ul>
 							</li>
 						</ul>

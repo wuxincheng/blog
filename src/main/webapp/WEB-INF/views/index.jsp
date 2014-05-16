@@ -38,21 +38,21 @@
 							<div class="item">
 								<div class="grid-entry">
 									<div class="entry-info">
-										<h5><a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}">${blogInfo.blogTitle}</a></h5>
+										<h5><a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank">${blogInfo.blogTitle}</a></h5>
 										<div class="spt">
 											<i class="fa fa-bookmark"></i> ${blogInfo.blogTypeName} &nbsp;&nbsp;&nbsp;&nbsp;
 											<i class="fa fa-calendar"></i> ${blogInfo.blogTime}
 										</div>
 									</div>
 									<div class="grid-img">
-										<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}">
+										<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank">
 											<img src="${blogInfo.picLink}" class="img-responsive" alt="">
 										</a>
 									</div>
 									<div class="entry-info">
 										<!-- Paragraph -->
 										<div class="sp">${blogInfo.subContent}</div>
-										<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" class="read-more">
+										<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank" class="read-more">
 											<button type="button" class="btn btn-danger btn-sm">阅读详细</button> 
 											<i class="fa fa-angle-double-right"></i>
 										</a>
@@ -76,7 +76,10 @@
 			
 			<div class="container">
 				<div class="ya2dan-container">
+					<!-- 
 			        <button type="button" class="btn btn-danger btn-block">点击加载更多</button>
+					 -->
+			        <button type="button" class="btn btn-success btn-block">已经加载全部</button>
 		        </div>
 			</div>
 		</div>
