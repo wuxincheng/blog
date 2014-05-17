@@ -26,5 +26,10 @@ public interface BlogInfoService {
 	 * @return
 	 */
 	public abstract BlogInfo queryByBlogId(String blogId);
+
+	/**
+	 * 更新博客访问量
+	 */
+	public abstract void updateReadCount(String blogId);
 	
 }

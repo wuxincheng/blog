@@ -35,4 +35,8 @@
 		WHERE i.BLOG_ID = #blogId#
 	</select>
 	
+	<update id="updateReadCount" parameterClass="java.lang.String">
+		UPDATE T_BLOG_DETAIL_INFO SET READE_COUNT = (READE_COUNT+1) WHERE BLOG_ID = #blogId#
+	</update>
+	
 </sqlMap>

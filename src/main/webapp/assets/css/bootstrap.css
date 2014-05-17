@@ -4487,6 +4487,11 @@ a.thumbnail.active {
   background-color: #f2dede;
   border-color: #ebccd1;
 }
+.alert-wuxincheng {
+  color: #f2dede;
+  background-color: #f75353;
+  border-color: #ebccd1;
+}
 .alert-ya2danmsg {
   color: #fff;
   background-color: #f75353;

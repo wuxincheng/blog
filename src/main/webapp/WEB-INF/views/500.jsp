@@ -21,15 +21,23 @@
 		
 		<div class="container">
 			<div class="ya2dan-top-container">
-		        <div class="info-404">
-		        	<p>
-		        	对不起，服务器出现异常，请稍后再访问！
-		        	</p>
-		        	
-		        	<p>
-		        	Sorry, shutdown!
-		        	</p>
+				<div class="badger-left badger-notice" data-badger="新成提示">
+					<br>
+					<div class="row">
+						<div class="col-sm-3"></div>
+        				<div class="col-sm-2" style="text-align: center;">
+        					<img src="<%=request.getContextPath()%>/assets/img/sorry.png">
+        				</div>
+        				<div class="col-sm-7">
+	        				<br>
+							<p>
+				        	<h4>啊噢，对不起，服务器异常耶，请您稍后再试！</h4>
+				        	<p>&nbsp;</p>
+        				</div>
+        			</div>
 		        </div>
+		        <hr>
+		        <p>&nbsp;</p>
 	        </div>
 		</div>
 		

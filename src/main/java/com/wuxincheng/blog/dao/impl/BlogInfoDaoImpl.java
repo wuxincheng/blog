@@ -21,4 +21,9 @@ public class BlogInfoDaoImpl extends BaseDao implements BlogInfoDao {
 		return (BlogInfo) this.getSqlMapClientTemplate().queryForObject("BlogInfo.queryByBlogId", blogId);
 	}
 
+	@Override
+	public void updateReadCount(String blogId) {
+		this.getSqlMapClientTemplate().update("BlogInfo.updateReadCount", blogId);
+	}
+
 }

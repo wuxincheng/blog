@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>新成博客 - 首页</title>
+<title>首页 - 新成博客</title>
 <meta name="description" content="Your description">
 <meta name="keywords" content="Your,Keywords">
 <meta name="author" content="ResponsiveWebInc">
@@ -21,8 +21,8 @@
 		
 		<div class="container">
 			<div class="ya2dan-top-container">
-		        <div class="alert alert-info">
-					<strong>平台通知：</strong> 网站平台将于2014-05-20 21:00更新，感谢网友的支持！
+		        <div class="alert alert-ya2danmsg">
+					网站处于试运营阶段，有大量地方需要改进，欢迎提出宝贵的意见，联系方式：wuxinchenghappy@gmail.com
 				</div>
 	        </div>
 		</div>
@@ -52,10 +52,15 @@
 									<div class="entry-info">
 										<!-- Paragraph -->
 										<div class="sp">${blogInfo.subContent}</div>
-										<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank" class="read-more">
-											<button type="button" class="btn btn-danger btn-sm">阅读详细</button> 
-											<i class="fa fa-angle-double-right"></i>
-										</a>
+										<div class="sp">
+						          			<div class="pull-left"></div>
+						          			<div class="pull-right">
+							          			<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank" class="read-more">
+													<button type="button" class="btn btn-danger btn-sm">阅读详细</button> 
+													<i class="fa fa-angle-double-right"></i>
+												</a>
+						          			</div>
+						          		</div>
 									</div>
 								</div>
 							</div>
@@ -79,7 +84,7 @@
 					<!-- 
 			        <button type="button" class="btn btn-danger btn-block">点击加载更多</button>
 					 -->
-			        <button type="button" class="btn btn-success btn-block">已经加载全部</button>
+			        <button type="button" class="btn btn-danger btn-block">已经加载全部</button>
 		        </div>
 			</div>
 		</div>

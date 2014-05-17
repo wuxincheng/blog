@@ -31,4 +31,9 @@ public class BlogInfoServiceImpl implements BlogInfoService {
 		return blogInfoDao.queryByBlogId(blogId);
 	}
 
+	@Override
+	public void updateReadCount(String blogId) {
+		blogInfoDao.updateReadCount(blogId);
+	}
+
 }
