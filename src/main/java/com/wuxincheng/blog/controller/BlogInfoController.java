@@ -44,6 +44,8 @@ public class BlogInfoController {
 		
 		request.getSession().setAttribute("types", types);
 		
+		request.getSession().setAttribute("blogInfos", blogInfos);
+		
 		model.addAttribute(Constants.TOP_NAV_FLAG, "index");
 		
 		return "index";

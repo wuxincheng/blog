@@ -46,16 +46,16 @@
 	        			</div>
 						<div class="col-sm-3 blog-sidebar">
 							<!-- 阅读排行start -->
-							<!-- 
 							<div class="badger-left badger-notice" data-badger="阅读排行">
 					        </div>
-							<c:forEach var="ddi" begin="1" end="12" step="1">
+							<c:forEach items="${blogInfos}" var="blogInfo" begin="2" end="10" step="1">
 							<div class="left-info-d">
-								<h6><strong>百度这下要“发”了，传Google Brain之父将加盟百度</strong></h6>
-								<a href=""><img src="/assets/images/${ddi}.jpg" class="img-responsive"></a>
+								<h5><strong><a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank">${blogInfo.blogTitle}</a></strong></h5>
+								<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank">
+									<img src="${blogInfo.picLink}" class="img-responsive" alt="">
+								</a>
 							</div>
 				          	</c:forEach>
-							 -->
 							<!-- 阅读排行end -->
 							
 							<!-- 新成微信start -->
