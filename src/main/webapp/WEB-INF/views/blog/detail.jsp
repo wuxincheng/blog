@@ -12,6 +12,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <jsp:include page="../base.jsp" />
 
+<!-- 新浪微博关注 -->
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+
+<style type="text/css">
+	.blog-post img {
+		max-width: 100%;
+		height: auto !important;
+	}
+</style>
+
 </head>
 
 <body>
@@ -37,18 +47,17 @@
 			          			<div class="pull-left"></div>
 			          			<div class="pull-right"><jsp:include page="../share_bar.jsp" /></div>
 			          		</div>
-			          		<!-- 
+			          		
 							<div class="next-prev-info">
 								<span class="label label-danger">上一篇：</span> <a href="">狙击Google Glass？三星九月份将推基于Tizen系统的Gear Glass</a><br>
 								<span class="label label-danger">下一篇：</span> <a href="">最新消息：iPhone 6将采用更大、更清晰的1704x960分辨率屏幕</a>
 							</div>
-			          		 -->
 	        			</div>
 						<div class="col-sm-3 blog-sidebar">
 							<!-- 阅读排行start -->
 							<div class="badger-left badger-notice" data-badger="阅读排行">
 					        </div>
-							<c:forEach items="${blogInfos}" var="blogInfo" begin="2" end="10" step="1">
+							<c:forEach items="${blogInfos}" var="blogInfo" begin="1" end="5" step="1">
 							<div class="left-info-d">
 								<h5><strong><a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank">${blogInfo.blogTitle}</a></strong></h5>
 								<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank">
@@ -57,6 +66,22 @@
 							</div>
 				          	</c:forEach>
 							<!-- 阅读排行end -->
+							
+							<!-- 新浪微博start -->
+							<div class="badger-left badger-notice" data-badger="新浪微博">
+					        </div>
+							<div class="left-info-d">
+								<wb:follow-button uid="3197818262" type="red_4" width="100%" height="64" ></wb:follow-button>
+							</div>
+							<!-- 新浪微博end -->
+							
+							<!-- 腾讯微博start -->
+							<div class="badger-left badger-notice" data-badger="腾讯微博">
+					        </div>
+							<div class="left-info-d">
+								<iframe src="http://follow.v.t.qq.com/index.php?c=follow&a=quick&appkey=801509749&sign=55232e90&v=2&name=wu_xincheng&style=1&t=1401029187465&f=1" frameborder="0" scrolling="auto" width="227" height="75" marginwidth="0" marginheight="0" allowtransparency="true"></iframe>
+							</div>
+							<!-- 腾讯微博end -->
 							
 							<!-- 新成微信start -->
 							<div class="badger-left badger-notice" data-badger="新成微信">

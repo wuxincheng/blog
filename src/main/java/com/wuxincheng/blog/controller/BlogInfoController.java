@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.wuxincheng.blog.model.BlogInfo;
 import com.wuxincheng.blog.model.Type;
@@ -31,11 +30,9 @@ public class BlogInfoController {
 	
 	@RequestMapping(value = "/list")
 	public String list(Model model, HttpServletRequest request) {
-		String rometeAddr = request.getRemoteAddr();
-		logger.info("接收到请求的IP：" + rometeAddr);
-		
 		logger.info("查询所有博客信息");
 
+		// TODO 分页显示Ajax请求
 		List<BlogInfo> blogInfos = blogInfoService.queryAll();
 		
 		List<Type> types = typeService.queryAll();
@@ -44,15 +41,13 @@ public class BlogInfoController {
 		
 		request.getSession().setAttribute("types", types);
 		
-		request.getSession().setAttribute("blogInfos", blogInfos);
-		
 		model.addAttribute(Constants.TOP_NAV_FLAG, "index");
 		
 		return "index";
 	}
 	
 	@RequestMapping(value = "/detail")
-	public String detail(@RequestParam String blogId, Model model) {
+	public String detail(HttpServletRequest request, String blogId, Model model) {
 		logger.info("查询博客详细信息");
 		
 		if (Validation.isBlank(blogId)) {
@@ -75,6 +70,14 @@ public class BlogInfoController {
 		blogInfoService.updateReadCount(blogId);
 		
 		model.addAttribute("blogInfo", blogInfo);
+		
+		// TODO 阅读量排行前5
+		@SuppressWarnings("unchecked")
+		List<BlogInfo> blogInfos = (List<BlogInfo>) request.getSession().getAttribute("blogInfos");
+		if (!(blogInfos != null && blogInfos.size() > 0)) {
+			blogInfos = blogInfoService.queryAll();
+			request.getSession().setAttribute("blogInfos", blogInfos);
+		}
 		
 		return "blog/detail";
 	}

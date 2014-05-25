@@ -14,7 +14,7 @@
 	
 		<!-- Scroll to top -->
 		<span class="totop" style="display: block;">
-			<a href="http://responsivewebinc.com/premium/charlie111/#.home"> <i class="fa fa-chevron-up"></i> </a>
+			<a href="#"> <i class="fa fa-chevron-up"></i> </a>
 		</span>
 		<!-- Wrapper End -->
 		

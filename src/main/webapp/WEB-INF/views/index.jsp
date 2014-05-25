@@ -38,7 +38,11 @@
 							<div class="item">
 								<div class="grid-entry">
 									<div class="entry-info">
-										<h5><a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank">${blogInfo.blogTitle}</a></h5>
+										<h4>
+											<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank">
+												<strong>${blogInfo.blogTitle}</strong>
+											</a>
+										</h4>
 										<div class="spt">
 											<i class="fa fa-bookmark"></i> ${blogInfo.blogTypeName} &nbsp;&nbsp;&nbsp;&nbsp;
 											<i class="fa fa-calendar"></i> ${blogInfo.blogTime}
