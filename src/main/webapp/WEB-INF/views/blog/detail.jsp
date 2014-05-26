@@ -34,26 +34,47 @@
         				<div class="col-sm-9 blog-main">
 							<div class="blog-post">
 			            		<h3 class="blog-post-title">${blogInfo.blogTitle}</h3>
-			            		<p class="blog-post-meta">
-			            			<i class="fa fa-bookmark"></i> ${blogInfo.blogTypeName} &nbsp;&nbsp;&nbsp;&nbsp;
-									<i class="fa fa-calendar"></i> ${blogInfo.updateTime}
-								</p>
+			            		
+			            		<div class="share-info">
+				          			<div class="pull-left">
+				            			<i class="fa fa-bookmark"></i> ${blogInfo.blogTypeName} &nbsp;&nbsp;&nbsp;&nbsp;
+										<i class="fa fa-calendar"></i> ${blogInfo.updateTime}
+				          			</div>
+				          			<div class="pull-right"><jsp:include page="../share_bar.jsp" /></div>
+				          		</div>
+			            		
 								<blockquote>
 					              <p><strong>摘要：</strong>${blogInfo.subContent}</p>
 					            </blockquote>
 			            		<p>${blogInfo.blogContent}</p>
 			          		</div>
+			          		<p>&nbsp;</p>
+			          		<div class="badger-left badger-notice" data-badger="我要分享">
+					        </div>
 			          		<div class="share-info">
-			          			<div class="pull-left"></div>
-			          			<div class="pull-right"><jsp:include page="../share_bar.jsp" /></div>
+			          			<div class="pull-left">
+			          			<!-- AddThis Button BEGIN -->
+								<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+								<a class="addthis_button_google_plusone_share"></a>
+								<a class="addthis_button_facebook"></a>
+								<a class="addthis_button_twitter"></a>
+								<a class="addthis_button_qzone"></a>
+								<a class="addthis_button_sinaweibo"></a>
+								<a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
+								</div>
+								<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+								<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5339067e58425730"></script>
+								<!-- AddThis Button END -->
+			          			</div>
+			          			<div class="pull-right">
+			          			
+			          			</div>
 			          		</div>
 			          		
-			          		<!-- 
 							<div class="next-prev-info">
 								<span class="label label-danger">上一篇：</span> <a href="">狙击Google Glass？三星九月份将推基于Tizen系统的Gear Glass</a><br>
 								<span class="label label-danger">下一篇：</span> <a href="">最新消息：iPhone 6将采用更大、更清晰的1704x960分辨率屏幕</a>
 							</div>
-			          		 -->
 	        			</div>
 						<div class="col-sm-3 blog-sidebar">
 							<!-- 阅读排行start -->
