@@ -14,11 +14,11 @@ public class BlogInfo implements Serializable {
 
 	/** 博客主键 */
 	private String blogId;
-	
+
 	private String blogTitle;
 	/** 博客类型主键 */
 	private String blogType;
-	
+
 	private String blogTypeName;
 
 	private String blogContent;
@@ -29,13 +29,17 @@ public class BlogInfo implements Serializable {
 
 	private Integer shareCount;
 
+	/** 博客状态: 0-正常, 1-不发布(禁用), 2-删除 */
 	private String blogState;
 
 	private String picId;
-	
+
 	private String picLink;
-	
+
 	private String subContent;
+
+	/** 更新时间 */
+	private String updateTime;
 
 	public BlogInfo() {
 	}
@@ -134,6 +138,14 @@ public class BlogInfo implements Serializable {
 
 	public void setSubContent(String subContent) {
 		this.subContent = subContent;
+	}
+
+	public String getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(String updateTime) {
+		this.updateTime = updateTime;
 	}
 
 }

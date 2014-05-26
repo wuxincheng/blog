@@ -36,7 +36,7 @@
 			            		<h3 class="blog-post-title">${blogInfo.blogTitle}</h3>
 			            		<p class="blog-post-meta">
 			            			<i class="fa fa-bookmark"></i> ${blogInfo.blogTypeName} &nbsp;&nbsp;&nbsp;&nbsp;
-									<i class="fa fa-calendar"></i> ${blogInfo.blogTime}
+									<i class="fa fa-calendar"></i> ${blogInfo.updateTime}
 								</p>
 								<blockquote>
 					              <p><strong>摘要：</strong>${blogInfo.subContent}</p>
@@ -48,20 +48,22 @@
 			          			<div class="pull-right"><jsp:include page="../share_bar.jsp" /></div>
 			          		</div>
 			          		
+			          		<!-- 
 							<div class="next-prev-info">
 								<span class="label label-danger">上一篇：</span> <a href="">狙击Google Glass？三星九月份将推基于Tizen系统的Gear Glass</a><br>
 								<span class="label label-danger">下一篇：</span> <a href="">最新消息：iPhone 6将采用更大、更清晰的1704x960分辨率屏幕</a>
 							</div>
+			          		 -->
 	        			</div>
 						<div class="col-sm-3 blog-sidebar">
 							<!-- 阅读排行start -->
 							<div class="badger-left badger-notice" data-badger="阅读排行">
 					        </div>
-							<c:forEach items="${blogInfos}" var="blogInfo" begin="1" end="5" step="1">
+							<c:forEach items="${topBlogInfos}" var="topBlogInfo">
 							<div class="left-info-d">
-								<h5><strong><a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank">${blogInfo.blogTitle}</a></strong></h5>
-								<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank">
-									<img src="${blogInfo.picLink}" class="img-responsive" alt="">
+								<h5><strong><a href="<%=request.getContextPath()%>/blog/detail?blogId=${topBlogInfo.blogId}" target="_blank">${topBlogInfo.blogTitle}</a></strong></h5>
+								<a href="<%=request.getContextPath()%>/blog/detail?blogId=${topBlogInfo.blogId}" target="_blank">
+									<img src="${topBlogInfo.picLink}" class="img-responsive" />
 								</a>
 							</div>
 				          	</c:forEach>

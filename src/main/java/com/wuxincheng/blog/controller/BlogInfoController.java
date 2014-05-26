@@ -71,12 +71,16 @@ public class BlogInfoController {
 		
 		model.addAttribute("blogInfo", blogInfo);
 		
-		// TODO 阅读量排行前5
+		// 阅读量排行前5
 		@SuppressWarnings("unchecked")
-		List<BlogInfo> blogInfos = (List<BlogInfo>) request.getSession().getAttribute("blogInfos");
-		if (!(blogInfos != null && blogInfos.size() > 0)) {
-			blogInfos = blogInfoService.queryAll();
-			request.getSession().setAttribute("blogInfos", blogInfos);
+		List<BlogInfo> topBlogInfos = (List<BlogInfo>) request.getSession().getAttribute("topBlogInfos");
+		if (!(topBlogInfos != null && topBlogInfos.size() > 0)) {
+			topBlogInfos = blogInfoService.queryTopRead("5");
+			request.getSession().setAttribute("topBlogInfos", topBlogInfos);
+			
+			for (BlogInfo blogInfo2 : topBlogInfos) {
+				logger.info(blogInfo2.getBlogTitle() + blogInfo2.getReadCount());
+			}
 		}
 		
 		return "blog/detail";

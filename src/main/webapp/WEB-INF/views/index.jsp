@@ -45,7 +45,7 @@
 										</h4>
 										<div class="spt">
 											<i class="fa fa-bookmark"></i> ${blogInfo.blogTypeName} &nbsp;&nbsp;&nbsp;&nbsp;
-											<i class="fa fa-calendar"></i> ${blogInfo.blogTime}
+											<i class="fa fa-calendar"></i> ${blogInfo.updateTime}
 										</div>
 									</div>
 									<div class="grid-img">

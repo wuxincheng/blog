@@ -32,4 +32,12 @@ public interface BlogInfoService {
 	 */
 	public abstract void updateReadCount(String blogId);
 	
+	/**
+	 * 查询阅读排行
+	 * 
+	 * @param top
+	 * @return
+	 */
+	public abstract List<BlogInfo> queryTopRead(String top);
+	
 }

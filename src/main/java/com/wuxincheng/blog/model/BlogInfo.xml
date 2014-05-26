@@ -8,31 +8,49 @@
 		<result property="blogTitle" column="BLOG_TITLE" />
 		<result property="blogContent" column="BLOG_CONTENT" />
 		<result property="blogTime" column="CREATE_TIME" />
+		<result property="updateTime" column="UPDATE_TIME" />
 		<result property="picLink" column="PIC_LINK" />
 		<result property="subContent" column="SUB_CONTENT" />
 		<result property="blogTypeName" column="TYPE_NAME" />
 		<result property="readCount" column="READE_COUNT" />
 		<result property="shareCount" column="SHARE_COUNT" />
+		<result property="blogState" column="BLOG_STATE" />
 	</resultMap>
 	
 	<select id="queryAll" parameterClass="java.lang.String" resultMap="BlogInfoMapping">
 		SELECT 
 			i.BLOG_ID, i.BLOG_TITLE, i.BLOG_CONTENT, i.SUB_CONTENT, 
+			DATE_FORMAT(i.UPDATE_TIME,'%Y-%m-%d %H:%i:%S') AS UPDATE_TIME, 
 			DATE_FORMAT(i.CREATE_TIME,'%Y-%m-%d %H:%i:%S') AS CREATE_TIME, 
-			i.PIC_LINK, t.TYPE_NAME, i.SHARE_COUNT, i.READE_COUNT
+			i.PIC_LINK, t.TYPE_NAME, i.SHARE_COUNT, i.READE_COUNT, i.BLOG_STATE
 		FROM T_BLOG_DETAIL_INFO i 
 			LEFT JOIN T_BLOG_TYPE t ON i.BLOG_TYPE = t.TYPE_ID
-		ORDER BY i.CREATE_TIME
+		WHERE i.BLOG_STATE = '0'
+		ORDER BY i.UPDATE_TIME DESC
+	</select>
+	
+	<select id="queryTopRead" parameterClass="java.lang.Integer" resultMap="BlogInfoMapping">
+		SELECT 
+			i.BLOG_ID, i.BLOG_TITLE, i.BLOG_CONTENT, i.SUB_CONTENT, 
+			DATE_FORMAT(i.UPDATE_TIME,'%Y-%m-%d %H:%i:%S') AS UPDATE_TIME, 
+			DATE_FORMAT(i.CREATE_TIME,'%Y-%m-%d %H:%i:%S') AS CREATE_TIME, 
+			i.PIC_LINK, t.TYPE_NAME, i.SHARE_COUNT, i.READE_COUNT, i.BLOG_STATE
+		FROM T_BLOG_DETAIL_INFO i 
+			LEFT JOIN T_BLOG_TYPE t ON i.BLOG_TYPE = t.TYPE_ID
+		WHERE i.BLOG_STATE = '0'
+		ORDER BY i.READE_COUNT DESC
+		LIMIT 0, 5
 	</select>
 	
 	<select id="queryByBlogId" parameterClass="java.lang.String" resultMap="BlogInfoMapping">
 		SELECT 
 			i.BLOG_ID, i.BLOG_TITLE, i.BLOG_CONTENT, i.SUB_CONTENT, 
+			DATE_FORMAT(i.UPDATE_TIME,'%Y-%m-%d %H:%i:%S') AS UPDATE_TIME, 
 			DATE_FORMAT(i.CREATE_TIME,'%Y-%m-%d %H:%i:%S') AS CREATE_TIME, 
-			i.PIC_LINK, t.TYPE_NAME, i.SHARE_COUNT, i.READE_COUNT
+			i.PIC_LINK, t.TYPE_NAME, i.SHARE_COUNT, i.READE_COUNT, i.BLOG_STATE
 		FROM T_BLOG_DETAIL_INFO i 
 			LEFT JOIN T_BLOG_TYPE t ON i.BLOG_TYPE = t.TYPE_ID
-		WHERE i.BLOG_ID = #blogId#
+		WHERE i.BLOG_ID = #blogId# AND i.BLOG_STATE = '0'
 	</select>
 	
 	<update id="updateReadCount" parameterClass="java.lang.String">

@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.wuxincheng.blog.dao.BlogInfoDao;
 import com.wuxincheng.blog.model.BlogInfo;
 import com.wuxincheng.blog.service.BlogInfoService;
+import com.wuxincheng.blog.util.Validation;
 
 /**
  * 博客信息
@@ -34,6 +35,18 @@ public class BlogInfoServiceImpl implements BlogInfoService {
 	@Override
 	public void updateReadCount(String blogId) {
 		blogInfoDao.updateReadCount(blogId);
+	}
+
+	@Override
+	public List<BlogInfo> queryTopRead(String top) {
+		// 判断是否为正整数, 如果是则返回空
+		if (!Validation.isInt(top, "+")) {
+			return null;
+		}
+		
+		Integer intTop = Integer.parseInt(top);
+		
+		return blogInfoDao.queryTopRead(intTop);
 	}
 
 }
