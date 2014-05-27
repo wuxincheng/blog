@@ -38,9 +38,9 @@
 			            		<div class="share-info">
 				          			<div class="pull-left">
 				            			<i class="fa fa-bookmark"></i> ${blogInfo.blogTypeName} &nbsp;&nbsp;&nbsp;&nbsp;
-										<i class="fa fa-calendar"></i> ${blogInfo.updateTime}
+										<i class="fa fa-calendar"></i> ${blogInfo.updateTime} &nbsp;&nbsp;&nbsp;&nbsp;
 				          			</div>
-				          			<div class="pull-right"><jsp:include page="../share_bar.jsp" /></div>
+				          			<div class="pull-right"></div>
 				          		</div>
 			            		
 								<blockquote>
@@ -53,18 +53,7 @@
 					        </div>
 			          		<div class="share-info">
 			          			<div class="pull-left">
-			          			<!-- AddThis Button BEGIN -->
-								<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-								<a class="addthis_button_google_plusone_share"></a>
-								<a class="addthis_button_facebook"></a>
-								<a class="addthis_button_twitter"></a>
-								<a class="addthis_button_qzone"></a>
-								<a class="addthis_button_sinaweibo"></a>
-								<a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
-								</div>
-								<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-								<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5339067e58425730"></script>
-								<!-- AddThis Button END -->
+			          				<jsp:include page="../share_bar.jsp" />
 			          			</div>
 			          			<div class="pull-right">
 			          			
@@ -77,42 +66,7 @@
 							</div>
 	        			</div>
 						<div class="col-sm-3 blog-sidebar">
-							<!-- 阅读排行start -->
-							<div class="badger-left badger-notice" data-badger="阅读排行">
-					        </div>
-							<c:forEach items="${topBlogInfos}" var="topBlogInfo">
-							<div class="left-info-d">
-								<h5><strong><a href="<%=request.getContextPath()%>/blog/detail?blogId=${topBlogInfo.blogId}" target="_blank">${topBlogInfo.blogTitle}</a></strong></h5>
-								<a href="<%=request.getContextPath()%>/blog/detail?blogId=${topBlogInfo.blogId}" target="_blank">
-									<img src="${topBlogInfo.picLink}" class="img-responsive" />
-								</a>
-							</div>
-				          	</c:forEach>
-							<!-- 阅读排行end -->
-							
-							<!-- 新浪微博start -->
-							<div class="badger-left badger-notice" data-badger="新浪微博">
-					        </div>
-							<div class="left-info-d">
-								<wb:follow-button uid="3197818262" type="red_4" width="100%" height="64" ></wb:follow-button>
-							</div>
-							<!-- 新浪微博end -->
-							
-							<!-- 腾讯微博start -->
-							<div class="badger-left badger-notice" data-badger="腾讯微博">
-					        </div>
-							<div class="left-info-d">
-								<iframe src="http://follow.v.t.qq.com/index.php?c=follow&a=quick&appkey=801509749&sign=55232e90&v=2&name=wu_xincheng&style=1&t=1401029187465&f=1" frameborder="0" scrolling="auto" width="227" height="75" marginwidth="0" marginheight="0" allowtransparency="true"></iframe>
-							</div>
-							<!-- 腾讯微博end -->
-							
-							<!-- 新成微信start -->
-							<div class="badger-left badger-notice" data-badger="新成微信">
-					        </div>
-							<div class="left-info-d">
-								<img src="<%=request.getContextPath()%>/assets/img/weixin.png" class="img-responsive">
-							</div>
-							<!-- 新成微信end -->
+							<jsp:include page="../right.jsp" />
 	      				</div>
 					</div>
 				</div>

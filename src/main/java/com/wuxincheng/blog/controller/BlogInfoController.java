@@ -77,10 +77,6 @@ public class BlogInfoController {
 		if (!(topBlogInfos != null && topBlogInfos.size() > 0)) {
 			topBlogInfos = blogInfoService.queryTopRead("5");
 			request.getSession().setAttribute("topBlogInfos", topBlogInfos);
-			
-			for (BlogInfo blogInfo2 : topBlogInfos) {
-				logger.info(blogInfo2.getBlogTitle() + blogInfo2.getReadCount());
-			}
 		}
 		
 		return "blog/detail";
