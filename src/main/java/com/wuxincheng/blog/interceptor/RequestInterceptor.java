@@ -43,7 +43,7 @@ public class RequestInterceptor implements HandlerInterceptor {
 		String requestURL = address.substring(address.indexOf('/'), address.length());
 		
 		// 1. 记录访问日志
-		logger.info("访客IP地址：" + remoteAddress + "，访问路径：" + requestURL);
+		logger.info("访客IP地址：[" + remoteAddress + "]，访问路径：[" + requestURL + "]");
 		
 		// 2. 记录到数据库: ip / 时间 / url / 
 		
