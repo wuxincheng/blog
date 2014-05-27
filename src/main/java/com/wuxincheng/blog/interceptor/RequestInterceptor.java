@@ -36,11 +36,14 @@ public class RequestInterceptor implements HandlerInterceptor {
 		String remoteAddress = request.getRemoteAddr();
 		
 		if (!(mappingURL == null || url.matches(mappingURL))) {
-			return false;
+			logger.info("mappingURL：" + mappingURL);
         }
 		
+		String address = url.substring(url.indexOf("//")+2, url.length());
+		String requestURL = address.substring(address.indexOf('/'), address.length());
+		
 		// 1. 记录访问日志
-		logger.info("访客：" + remoteAddress + "：" + url);
+		logger.info("访客IP地址：" + remoteAddress + "，访问路径：" + requestURL);
 		
 		// 2. 记录到数据库: ip / 时间 / url / 
 		
