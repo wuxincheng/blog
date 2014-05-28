@@ -49,21 +49,31 @@
 			            		<p>${blogInfo.blogContent}</p>
 			          		</div>
 			          		<p>&nbsp;</p>
+			          		
 			          		<div class="badger-left badger-notice" data-badger="我要分享">
 					        </div>
-			          		<div class="share-info">
-			          			<div class="pull-left">
-			          				<jsp:include page="../share_bar.jsp" />
+					        <div class="jshare-info">
+					        	<div class="pull-left">
+				          			<jsp:include page="../share_bar.jsp" />
 			          			</div>
-			          			<div class="pull-right">
-			          			
-			          			</div>
+			          			<div class="pull-right"></div>
 			          		</div>
 			          		
+			          		<!-- 
+			          		<div class="badger-left badger-notice" data-badger="可能感兴趣的">
+					        </div>
+					        <div class="left-info-d">
+							</div>
+			          		 -->
+			          		
+			          		<!-- 
 							<div class="next-prev-info">
 								<span class="label label-danger">上一篇：</span> <a href="">狙击Google Glass？三星九月份将推基于Tizen系统的Gear Glass</a><br>
 								<span class="label label-danger">下一篇：</span> <a href="">最新消息：iPhone 6将采用更大、更清晰的1704x960分辨率屏幕</a>
 							</div>
+			          		 -->
+			          		
+			          		<hr>
 	        			</div>
 						<div class="col-sm-3 blog-sidebar">
 							<jsp:include page="../right.jsp" />

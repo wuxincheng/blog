@@ -1813,7 +1813,7 @@ hr{
 	border-color: #ebccd1;
 	padding: 0px 1px 15px 1px;
 	margin: 10px 0px 10px 0px;
-	line-height: 45px;
+	line-height: 40px;
 	border-bottom: 1px solid #F0F0F0;
 }
 
@@ -1826,7 +1826,15 @@ hr{
 }
 
 .share-info {
-	padding: 10px 0px 30px 0px;
+	padding: 10px 0px 20px 0px;
 	margin: 0px 0px 20px 0px;
 	font-size: 12px;
 }
+
+.jshare-info {
+	padding: 2px 1px 50px 0px;
+	margin: 10px 0px 20px 0px;
+	line-height: 5px;
+}
+
+

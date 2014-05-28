@@ -48,7 +48,7 @@ public class BlogInfoController {
 	
 	@RequestMapping(value = "/detail")
 	public String detail(HttpServletRequest request, String blogId, Model model) {
-		logger.info("查询博客详细信息");
+		logger.info("查询博客详细信息，blogId=" + blogId);
 		
 		if (Validation.isBlank(blogId)) {
 			return "404";
@@ -63,6 +63,7 @@ public class BlogInfoController {
 		blogInfo = blogInfoService.queryByBlogId(blogId);
 
 		if (null == blogInfo) {
+			logger.warn("博客信息信息，blogId=" + blogId + "，已跳转到404页面");
 			return "404";
 		}
 		
