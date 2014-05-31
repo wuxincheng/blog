@@ -15,6 +15,8 @@ public class Request implements Serializable {
 	private String webType;
 
 	private String requestIp;
+	
+	private String ipAddress;
 
 	private String systemPath;
 
@@ -42,6 +44,14 @@ public class Request implements Serializable {
 
 	public void setRequestIp(String requestIp) {
 		this.requestIp = requestIp;
+	}
+
+	public String getIpAddress() {
+		return ipAddress;
+	}
+
+	public void setIpAddress(String ipAddress) {
+		this.ipAddress = ipAddress;
 	}
 
 	public String getSystemPath() {

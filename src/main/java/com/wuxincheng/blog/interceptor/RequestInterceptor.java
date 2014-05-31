@@ -15,6 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.wuxincheng.blog.model.Request;
 import com.wuxincheng.blog.service.RequestService;
 import com.wuxincheng.blog.util.Constants;
+import com.wuxincheng.blog.util.IPUtil;
 import com.wuxincheng.blog.util.Validation;
 
 /**
@@ -83,6 +84,10 @@ public class RequestInterceptor implements HandlerInterceptor {
 		Request requestInfo = new Request();
 		requestInfo.setWebType(Constants.BLOG_MODE);
 		requestInfo.setRequestIp(remoteAddress);
+		
+		String ipAddress = IPUtil.getAddressByIp(remoteAddress); // 根据IP获取地域
+		requestInfo.setIpAddress(ipAddress);
+		
 		requestInfo.setSystemPath(requestSystemPath);
 		requestInfo.setBlogId(blogId);
 		
@@ -107,6 +112,8 @@ public class RequestInterceptor implements HandlerInterceptor {
 				socialType = Constants.SOCIAL_WEIXIN;
 			} else if (Constants.SOCIAL_RENREN.equals(stype)) {
 				socialType = Constants.SOCIAL_RENREN;
+			} else if (Constants.SOCIAL_TIEBA.equals(stype)) {
+				socialType = Constants.SOCIAL_TIEBA;
 			} else {
 				socialType = Constants.SOCIAL_OTHER;
 			}

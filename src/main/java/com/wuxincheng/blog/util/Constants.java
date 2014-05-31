@@ -33,9 +33,9 @@ public class Constants {
 	public static final String SOCIAL_WEIXIN = "weixin";
 	/** 人人网 */
 	public static final String SOCIAL_RENREN = "renren";
+	/** 百度贴吧 */
+	public static final String SOCIAL_TIEBA = "tieba";
 	/** 其它平台*/
 	public static final String SOCIAL_OTHER = "wuxincheng";
-	
-	
 	
 }
