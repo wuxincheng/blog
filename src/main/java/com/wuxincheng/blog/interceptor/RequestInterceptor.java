@@ -85,8 +85,11 @@ public class RequestInterceptor implements HandlerInterceptor {
 		requestInfo.setWebType(Constants.BLOG_MODE);
 		requestInfo.setRequestIp(remoteAddress);
 		
-		String ipAddress = IPUtil.getAddressByIp(remoteAddress); // 根据IP获取地域
-		requestInfo.setIpAddress(ipAddress);
+		Map<String, String> ipInfo = IPUtil.getAddressByIp(remoteAddress);
+		requestInfo.setIpAddress(ipInfo.get("address"));
+		requestInfo.setCountry(ipInfo.get("country"));
+		requestInfo.setRegion(ipInfo.get("region"));
+		requestInfo.setCity(ipInfo.get("city"));
 		
 		requestInfo.setSystemPath(requestSystemPath);
 		requestInfo.setBlogId(blogId);
