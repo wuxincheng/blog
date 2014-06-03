@@ -54,6 +54,10 @@ public class RequestInterceptor implements HandlerInterceptor {
 		String requestIp = url.substring(url.indexOf("//")+2, url.length());
 		String requestSystemPath = requestIp.substring(requestIp.indexOf('/'), requestIp.length());
 		
+		if ("/".equals(requestSystemPath)) {
+			return true;
+		}
+		
 		String blogId = request.getParameter("blogId");
 		String stype = request.getParameter("stype");
 		Map<String, String[]> params = request.getParameterMap();
