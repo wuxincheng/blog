@@ -12,9 +12,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <jsp:include page="../base.jsp" />
 
-<!-- 新浪微博关注 -->
-<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
-
 <style type="text/css">
 	.blog-post img {
 		max-width: 100%;
