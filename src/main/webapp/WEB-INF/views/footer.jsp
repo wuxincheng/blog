@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-			
+
 		<!-- Footer start -->
 		<div class="footer text-center">
 			<div class="container">
@@ -11,22 +11,22 @@
 			</div>
 		</div>
 		<!-- Footer End -->
-	
+
 		<!-- Scroll to top -->
 		<span class="totop" style="display: block;">
 			<a href="#"> <i class="fa fa-chevron-up"></i> </a>
 		</span>
 		<!-- Wrapper End -->
-		
+
 		<!-- Javascript files -->
 		<script src="<%=request.getContextPath()%>/assets/js/jquery.js"></script>
 		<script src="<%=request.getContextPath()%>/assets/js/bootstrap.min.js"></script>
 		<script src="<%=request.getContextPath()%>/assets/js/imagesloaded.pkgd.min.js"></script>
 		<script src="<%=request.getContextPath()%>/assets/js/jquery.themepunch.plugins.min.js"></script>
 		<script src="<%=request.getContextPath()%>/assets/js/jquery.themepunch.revolution.min.js"></script>
-		
+
 		<script src="<%=request.getContextPath()%>/assets/js/jquery.nav.js"></script>
-		
+
 		<script src="<%=request.getContextPath()%>/assets/js/jquery.stellar.min.js"></script>
 		<script src="<%=request.getContextPath()%>/assets/js/waypoints.min.js"></script>
 		<script src="<%=request.getContextPath()%>/assets/js/masonry.pkgd.min.js"></script>
