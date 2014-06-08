@@ -15,7 +15,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.wuxincheng.blog.model.Request;
 import com.wuxincheng.blog.service.RequestService;
 import com.wuxincheng.blog.util.Constants;
-import com.wuxincheng.blog.util.IPUtil;
 import com.wuxincheng.blog.util.Validation;
 
 /**
@@ -89,11 +88,14 @@ public class RequestInterceptor implements HandlerInterceptor {
 		requestInfo.setWebType(Constants.BLOG_MODE);
 		requestInfo.setRequestIp(remoteAddress);
 		
+		/*
+		// 在后台管理中会处理这个
 		Map<String, String> ipInfo = IPUtil.getAddressByIp(remoteAddress);
 		requestInfo.setIpAddress(ipInfo.get("address"));
 		requestInfo.setCountry(ipInfo.get("country"));
 		requestInfo.setRegion(ipInfo.get("region"));
 		requestInfo.setCity(ipInfo.get("city"));
+		 */
 		
 		requestInfo.setSystemPath(requestSystemPath);
 		requestInfo.setBlogId(blogId);

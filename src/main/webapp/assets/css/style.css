@@ -975,8 +975,8 @@ hr{
 }
 
 .blog .grid .item { 
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 0px;
+	padding-right: 20px;
 	padding-top: 0px;
 	width: 33.3%;
 }
@@ -1789,8 +1789,8 @@ hr{
 }
 
 .ya2dan-top-container {
-	padding: 10px 15px 0px 5px;
-	margin: 10px 0px 0px 10px;
+	padding: 5px 20px 0px 0px;
+	margin: 10px 0px 0px 00px;
 }
 
 .ya2dan-container {
@@ -1813,7 +1813,7 @@ hr{
 	border-color: #ebccd1;
 	padding: 0px 1px 15px 1px;
 	margin: 10px 0px 10px 0px;
-	line-height: 40px;
+	line-height: 45px;
 	border-bottom: 1px solid #F0F0F0;
 }
 
@@ -1826,15 +1826,7 @@ hr{
 }
 
 .share-info {
-	padding: 10px 0px 20px 0px;
+	padding: 10px 0px 30px 0px;
 	margin: 0px 0px 20px 0px;
 	font-size: 12px;
 }
-
-.jshare-info {
-	padding: 2px 1px 50px 0px;
-	margin: 10px 0px 20px 0px;
-	line-height: 5px;
-}
-
-

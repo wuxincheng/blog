@@ -5,5 +5,5 @@
 
 <link href="<%=request.getContextPath()%>/assets/css/bootstrap.css" rel="stylesheet">
 <link href="<%=request.getContextPath()%>/assets/css/font-awesome.min.css" rel="stylesheet">
-<link href="<%=request.getContextPath()%>/assets/css/less-style.css" rel="stylesheet">
 <link href="<%=request.getContextPath()%>/assets/css/style.css" rel="stylesheet">
+<link href="<%=request.getContextPath()%>/assets/css/less-style.css" rel="stylesheet">

@@ -19,77 +19,92 @@
 	<div class="wrapper">
 		<jsp:include page="top.jsp" />
 		
-		<div class="container">
-			<div class="ya2dan-top-container">
-		        <div class="alert alert-ya2danmsg">
-					网站处于试运营阶段，有大量地方需要改进，欢迎提出宝贵的意见，联系方式：wuxinchenghappy@gmail.com
-				</div>
-	        </div>
-		</div>
 		
-		<div class="main-content">
-			<section id="blog">
-				<div class="blog padd">
-					<div class="container">
-						<c:choose>
-						<c:when test="${not empty blogInfos}">
-						<div id="container" class="grid" style="position: relative;">
-							<c:forEach items="${blogInfos}" var="blogInfo" varStatus="s">
-							<div class="item">
-								<div class="grid-entry">
-									<div class="entry-info">
-										<h4>
-											<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank">
-												<strong>${blogInfo.blogTitle}</strong>
-											</a>
-										</h4>
-										<div class="spt">
-											<i class="fa fa-bookmark"></i> ${blogInfo.blogTypeName} &nbsp;&nbsp;&nbsp;&nbsp;
-											<i class="fa fa-calendar"></i> ${blogInfo.updateTime}
+		<div class="container">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-9" role="main">
+						<div class="ya2dan-top-container">
+					        <div class="alert alert-info">
+								网站处于试运营阶段，有大量地方需要改进，欢迎提出宝贵的意见，联系方式：wuxinchenghappy@gmail.com
+							</div>
+				        </div>
+				        
+				        <div class="bs-example">
+					        <ul class="nav nav-pills">
+					        	<li class="active"><a href="#">全部</a></li>
+					        	<c:forEach items="${types}" var="type">
+								<li class=""><a href="#">${type.typeName}</a></li>
+								</c:forEach>
+							</ul>
+						</div>
+				        
+				        <p>&nbsp;</p>
+				        
+						<section id="blog">
+							<div class="blog padd">
+								<c:choose>
+								<c:when test="${not empty blogInfos}">
+								<div id="container" class="grid" style="position: relative;">
+									<c:forEach items="${blogInfos}" var="blogInfo" varStatus="s">
+									<div class="item">
+										<div class="grid-entry">
+											<div class="entry-info">
+												<h5>
+													<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank">
+														<strong>${blogInfo.blogTitle}</strong>
+													</a>
+												</h5>
+												<div class="spt">
+													<i class="fa fa-bookmark"></i> ${blogInfo.blogTypeName} &nbsp;&nbsp;&nbsp;&nbsp;
+													<i class="fa fa-calendar"></i> ${blogInfo.blogTime}
+												</div>
+											</div>
+											<div class="grid-img">
+												<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank">
+													<img src="${blogInfo.picLink}" class="img-responsive" alt="">
+												</a>
+											</div>
+											<div class="entry-info">
+												<!-- Paragraph -->
+												<div class="sp">${blogInfo.subContent}</div>
+												<div class="sp">
+								          			<div class="pull-left"></div>
+								          			<div class="pull-right">
+									          			<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank" class="read-more">
+															<button type="button" class="btn btn-danger btn-sm">阅读详细</button> 
+															<i class="fa fa-angle-double-right"></i>
+														</a>
+								          			</div>
+								          		</div>
+											</div>
 										</div>
 									</div>
-									<div class="grid-img">
-										<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank">
-											<img src="${blogInfo.picLink}" class="img-responsive" alt="">
-										</a>
-									</div>
-									<div class="entry-info">
-										<!-- Paragraph -->
-										<div class="sp">${blogInfo.subContent}</div>
-										<div class="sp">
-						          			<div class="pull-left"></div>
-						          			<div class="pull-right">
-							          			<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank" class="read-more">
-													<button type="button" class="btn btn-danger btn-sm">阅读详细</button> 
-													<i class="fa fa-angle-double-right"></i>
-												</a>
-						          			</div>
-						          		</div>
+									</c:forEach>
+								</div>
+								</c:when>
+								<c:otherwise>
+								<div class="ya2dan-container">
+									<div class="alert alert-warning">
+										<strong>提示：</strong>系统没有查询到博客信息
 									</div>
 								</div>
+								</c:otherwise>
+								</c:choose>
 							</div>
-							</c:forEach>
-						</div>
-						</c:when>
-						<c:otherwise>
-						<div class="ya2dan-container">
-							<div class="alert alert-warning">
-								<strong>提示：</strong>系统没有查询到博客信息
-							</div>
-						</div>
-						</c:otherwise>
-						</c:choose>
+						</section>
+						
+						<!-- 
+				        <button type="button" class="btn btn-danger btn-block">点击加载更多</button>
+						 -->
+				        <button type="button" class="btn btn-danger btn-block">已经加载全部</button>
+				        <p>&nbsp;</p>
+					</div>
+					
+					<div class="col-md-3">
+						<jsp:include page="right.jsp" />
 					</div>
 				</div>
-			</section>
-			
-			<div class="container">
-				<div class="ya2dan-container">
-					<!-- 
-			        <button type="button" class="btn btn-danger btn-block">点击加载更多</button>
-					 -->
-			        <button type="button" class="btn btn-danger btn-block">已经加载全部</button>
-		        </div>
 			</div>
 		</div>
 		

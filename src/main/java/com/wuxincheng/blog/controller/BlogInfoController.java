@@ -43,6 +43,8 @@ public class BlogInfoController {
 		
 		model.addAttribute(Constants.TOP_NAV_FLAG, "index");
 		
+		topReadList(request);
+		
 		return "index";
 	}
 	
@@ -72,6 +74,12 @@ public class BlogInfoController {
 		
 		model.addAttribute("blogInfo", blogInfo);
 		
+		topReadList(request);
+		
+		return "blog/detail";
+	}
+	
+	private void topReadList(HttpServletRequest request){
 		// 阅读量排行前5
 		@SuppressWarnings("unchecked")
 		List<BlogInfo> topBlogInfos = (List<BlogInfo>) request.getSession().getAttribute("topBlogInfos");
@@ -79,8 +87,6 @@ public class BlogInfoController {
 			topBlogInfos = blogInfoService.queryTopRead("5");
 			request.getSession().setAttribute("topBlogInfos", topBlogInfos);
 		}
-		
-		return "blog/detail";
 	}
 	
 }
