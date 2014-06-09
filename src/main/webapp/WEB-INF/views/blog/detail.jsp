@@ -46,11 +46,8 @@
 			            		<p>${blogInfo.blogContent}</p>
 			          		</div>
 			          		<p>&nbsp;</p>
-			          		
-			          		<div class="badger-left badger-notice" data-badger="我要分享">
-					        </div>
 					        <div class="jshare-info">
-					        	<div class="pull-left">
+					        	<div class="pull-right">
 				          			<jsp:include page="../share_bar.jsp" />
 			          			</div>
 			          			<div class="pull-right"></div>
@@ -81,6 +78,7 @@
 		</div>
 		
 		<jsp:include page="../footer.jsp" />
+		<jsp:include page="../js_simple.jsp" />
 	</div>
 </body>
 </html>

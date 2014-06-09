@@ -1,22 +1,33 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 
-<!-- JiaThis Button BEGIN -->
-<div class="jiathis_style_32x32">
-	<a class="jiathis_button_qzone"></a>
-	<a class="jiathis_button_tsina"></a>
-	<a class="jiathis_button_tqq"></a>
-	<a class="jiathis_button_weixin"></a>
-	<a class="jiathis_button_googleplus"></a>
-	<a class="jiathis_button_fb"></a>
-	<a class="jiathis_button_twitter"></a>
-	<a class="jiathis_button_renren"></a>
+<div class="bdsharebuttonbox">
+	
+	<a href="#"
+		class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#"
+		class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#"
+		class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#"
+		class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#"
+		class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#"
+		class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a><a href="#"
+		class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+		
+	<a href="#" class="bds_more" data-cmd="more"></a>
 </div>
-<script type="text/javascript" >
-var jiathis_config={
-	summary:"",
-	shortUrl:false,
-	hideMore:false
-}
+<script>
+	window._bd_share_config = {
+		"common" : {
+			"bdSnsKey" : {},
+			"bdText" : "",
+			"bdMini" : "2",
+			"bdMiniList" : false,
+			"bdPic" : "",
+			"bdStyle" : "0",
+			"bdSize" : "24"
+		},
+		"share" : {}
+	};
+	with (document)
+		0[(getElementsByTagName('head')[0] || body)
+				.appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='
+				+ ~(-new Date() / 36e5)];
 </script>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
-<!-- JiaThis Button END -->

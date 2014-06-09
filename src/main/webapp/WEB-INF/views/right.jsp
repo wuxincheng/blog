@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 		
+		<!-- 
 		<div class="left-info-d">
 			<form class="form-inline" role="form" action="" method="post">
 	        	<input type="text" class="form-control" style="width: 195px;" placeholder="请输入关键字" name="keyWord">
 	        	<button type="submit" class="btn btn-danger">搜索</button>
 	        </form>
 		</div>
+		 -->
 		
 		<!-- 新成微博 start -->
 		<div class="badger-left badger-notice" data-badger="新成微博">

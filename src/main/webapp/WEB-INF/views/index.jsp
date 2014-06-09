@@ -19,17 +19,17 @@
 	<div class="wrapper">
 		<jsp:include page="top.jsp" />
 		
-		
 		<div class="container">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-9" role="main">
-						<div class="ya2dan-top-container">
+						<div class="ya2dan-index-container">
 					        <div class="alert alert-info">
 								网站处于试运营阶段，有大量地方需要改进，欢迎提出宝贵的意见，联系方式：wuxinchenghappy@gmail.com
 							</div>
 				        </div>
 				        
+				        <!-- 
 				        <div class="bs-example">
 					        <ul class="nav nav-pills">
 					        	<li class="active"><a href="#">全部</a></li>
@@ -38,8 +38,7 @@
 								</c:forEach>
 							</ul>
 						</div>
-				        
-				        <p>&nbsp;</p>
+				         -->
 				        
 						<section id="blog">
 							<div class="blog padd">
@@ -109,6 +108,7 @@
 		</div>
 		
 		<jsp:include page="footer.jsp" />
+		<jsp:include page="js_simple.jsp" />
 	</div>
 </body>
 </html>

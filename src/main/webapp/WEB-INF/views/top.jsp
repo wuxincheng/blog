@@ -15,9 +15,6 @@
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
 							<li <c:if test="${'index' eq navFlag}">class="active"</c:if>><a href="<%=request.getContextPath()%>/blog/list">首页</a></li>
-							<li <c:if test="${'times' eq navFlag}">class="active"</c:if>><a href="<%=request.getContextPath()%>/times/show">关于网站</a></li>
-							<li <c:if test="${'times' eq navFlag}">class="active"</c:if>><a href="<%=request.getContextPath()%>/times/show">联系方式</a></li>
-							<li <c:if test="${'times' eq navFlag}">class="active"</c:if>><a href="<%=request.getContextPath()%>/times/show">时间轴</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="dropdown">

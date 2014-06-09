@@ -2,7 +2,6 @@
 Designed by : http://responsivewebinc.com
 ************************/
 /* Fonts */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
 /* Basic CSS starts */
 
@@ -1461,7 +1460,7 @@ hr{
 
 .totop a, .totop a:visited{
 	display:block;
-	width:35px;
+	width:36px;
 	height:35px;
 	text-align:center;
 	line-height:33px;
@@ -1767,6 +1766,7 @@ hr{
     padding: 20px 1px 0px 0px;
     background: #fff;
     border-top: 2px solid #f75353;
+    margin-top: 15px;
 }
 
 [class*="badger"]:after {
@@ -1789,8 +1789,13 @@ hr{
 }
 
 .ya2dan-top-container {
-	padding: 5px 20px 0px 0px;
+	padding: 5px 0px 0px 15px;
 	margin: 10px 0px 0px 00px;
+}
+
+.ya2dan-index-container {
+	padding: 5px 20px 0px 0px;
+	margin: 10px 0px 0px 0px;
 }
 
 .ya2dan-container {
