@@ -3,14 +3,13 @@
 		<!-- Footer start -->
 		<div class="footer text-center">
 			<div class="container">
-				<!-- Footer Copyright -->
+				<div>
+					免责声明：本站所有内容来源于互联网。如果本站部分内容侵犯您的权益，请您告知！
+				</div>
 				<div class="copyright">
 					<!-- Paragraph -->
-					<p>© Copyright 2014 - <a href="http://wuxincheng.com.cn">wuxincheng.com.cn</a> - All Rights Reserved.</p>
+					<div>© Copyright 2014 - <a href="http://wuxincheng.com.cn">wuxincheng.com.cn</a> - All Rights Reserved.</div>
 				</div>
-				<p>
-					免责声明：本站所有内容来源于互联网。如果本站部分内容侵犯您的权益，请您告知！
-				</p>
 			</div>
 		</div>
 		<!-- Footer End -->

@@ -66,8 +66,6 @@
 								<span class="label label-danger">下一篇：</span> <a href="">最新消息：iPhone 6将采用更大、更清晰的1704x960分辨率屏幕</a>
 							</div>
 			          		 -->
-			          		
-			          		<hr>
 	        			</div>
 						<div class="col-sm-3 blog-sidebar">
 							<jsp:include page="../right.jsp" />
