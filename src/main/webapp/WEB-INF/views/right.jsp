@@ -1,14 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 		
-		<!-- 
 		<div class="left-info-d">
 			<form class="form-inline" role="form" action="" method="post">
 	        	<input type="text" class="form-control" style="width: 195px;" placeholder="请输入关键字" name="keyWord">
 	        	<button type="submit" class="btn btn-danger">搜索</button>
 	        </form>
 		</div>
-		 -->
 		
 		<!-- 新成微博 start -->
 		<div class="badger-left badger-notice" data-badger="新成微博">
@@ -60,24 +58,12 @@
         </c:forEach>
 		<!-- 阅读排行end -->
 		
-		<!-- 新浪微博start -->
-		<!-- 
-		<div class="badger-left badger-notice" data-badger="新浪微博">
-        </div>
-		<div class="left-info-d">
-			<wb:follow-button uid="3197818262" type="red_4" width="100%" height="64" ></wb:follow-button>
-		</div>
-		 -->
-		<!-- 新浪微博end -->
-		
 		<!-- 腾讯微博start -->
-		<!-- 
-		<div class="badger-left badger-notice" data-badger="腾讯微博">
+		<div class="badger-left badger-notice" data-badger="其它文章">
         </div>
 		<div class="left-info-d">
-			<iframe src="http://follow.v.t.qq.com/index.php?c=follow&a=quick&appkey=801509749&sign=55232e90&v=2&name=wu_xincheng&style=1&t=1401029187465&f=1" frameborder="0" scrolling="auto" width="227" height="75" marginwidth="0" marginheight="0" allowtransparency="true"></iframe>
+			
 		</div>
-		 -->
 		<!-- 腾讯微博end -->
 		
 		<!-- 新成微信start -->

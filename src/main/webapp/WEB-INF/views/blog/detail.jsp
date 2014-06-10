@@ -30,7 +30,7 @@
 					<div class="row">
         				<div class="col-sm-9 blog-main">
 							<div class="blog-post">
-			            		<h3 class="blog-post-title">${blogInfo.blogTitle}</h3>
+			            		<h3>${blogInfo.blogTitle}</h3>
 			            		
 			            		<div class="share-info">
 				          			<div class="pull-left">
@@ -41,7 +41,7 @@
 				          		</div>
 			            		
 								<blockquote>
-					              <p><strong>摘要：</strong>${blogInfo.subContent}</p>
+					            	<strong>摘要：</strong>${blogInfo.subContent}
 					            </blockquote>
 			            		<p>${blogInfo.blogContent}</p>
 			          		</div>
@@ -60,12 +60,10 @@
 							</div>
 			          		 -->
 			          		
-			          		<!-- 
 							<div class="next-prev-info">
 								<span class="label label-danger">上一篇：</span> <a href="">狙击Google Glass？三星九月份将推基于Tizen系统的Gear Glass</a><br>
 								<span class="label label-danger">下一篇：</span> <a href="">最新消息：iPhone 6将采用更大、更清晰的1704x960分辨率屏幕</a>
 							</div>
-			          		 -->
 	        			</div>
 						<div class="col-sm-3 blog-sidebar">
 							<jsp:include page="../right.jsp" />
