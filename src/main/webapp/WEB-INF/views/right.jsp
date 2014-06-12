@@ -58,20 +58,14 @@
         </c:forEach>
 		<!-- 阅读排行end -->
 		
-		<!-- 腾讯微博start -->
+		<!-- 其它文章start -->
 		<div class="badger-left badger-notice" data-badger="其它文章">
         </div>
-		<div class="left-info-d">
-			
+		<div class="left-info-s">
+			<c:forEach items="${footerBlogInfos}" var="footerBlogInfo" varStatus="s">
+			<a href="<%=request.getContextPath()%>/blog/detail?blogId=${footerBlogInfo.blogId}" target="_blank">
+			<strong>${s.index+1}. ${footerBlogInfo.blogTitle}</strong><br>
+			</a>
+			</c:forEach>
 		</div>
-		<!-- 腾讯微博end -->
-		
-		<!-- 新成微信start -->
-		<!-- 
-		<div class="badger-left badger-notice" data-badger="新成微信">
-        </div>
-		<div class="left-info-d">
-			<img src="<%=request.getContextPath()%>/assets/img/weixin.png" class="img-responsive">
-		</div>
-		 -->
-		<!-- 新成微信end -->
+		<!-- 其它文章end -->

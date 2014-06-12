@@ -40,4 +40,12 @@ public interface BlogInfoDao {
 	 */
 	public abstract List<BlogInfo> queryTopRead(Integer top);
 	
+	/**
+	 * 其它阅读查询：查询阅读量最少的
+	 * 
+	 * @param top
+	 * @return
+	 */
+	public abstract List<BlogInfo> queryFooterRead(Integer top);
+	
 }

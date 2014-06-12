@@ -38,4 +38,8 @@ public class Constants {
 	/** 其它平台*/
 	public static final String SOCIAL_OTHER = "wuxincheng";
 	
+	/** 排序方式 */
+	public static final String ORDER_BY_DESC = "DESC";
+	public static final String ORDER_BY_ASC = "ASC";
+	
 }

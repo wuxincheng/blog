@@ -32,4 +32,10 @@ public class BlogInfoDaoImpl extends BaseDao implements BlogInfoDao {
 		return this.getSqlMapClientTemplate().queryForList("BlogInfo.queryTopRead");
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<BlogInfo> queryFooterRead(Integer top) {
+		return this.getSqlMapClientTemplate().queryForList("BlogInfo.queryFooterRead");
+	}
+
 }

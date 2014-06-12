@@ -42,6 +42,19 @@
 		LIMIT 0, 5
 	</select>
 	
+	<select id="queryFooterRead" parameterClass="java.lang.Integer" resultMap="BlogInfoMapping">
+		SELECT 
+			i.BLOG_ID, i.BLOG_TITLE, i.BLOG_CONTENT, i.SUB_CONTENT, 
+			DATE_FORMAT(i.UPDATE_TIME,'%Y-%m-%d %H:%i:%S') AS UPDATE_TIME, 
+			DATE_FORMAT(i.CREATE_TIME,'%Y-%m-%d %H:%i:%S') AS CREATE_TIME, 
+			i.PIC_LINK, t.TYPE_NAME, i.SHARE_COUNT, i.READE_COUNT, i.BLOG_STATE
+		FROM T_BLOG_DETAIL_INFO i 
+			LEFT JOIN T_BLOG_TYPE t ON i.BLOG_TYPE = t.TYPE_ID
+		WHERE i.BLOG_STATE = '0'
+		ORDER BY i.READE_COUNT ASC
+		LIMIT 0, 5
+	</select>
+	
 	<select id="queryByBlogId" parameterClass="java.lang.String" resultMap="BlogInfoMapping">
 		SELECT 
 			i.BLOG_ID, i.BLOG_TITLE, i.BLOG_CONTENT, i.SUB_CONTENT, 

@@ -43,7 +43,7 @@ public class BlogInfoController {
 		
 		model.addAttribute(Constants.TOP_NAV_FLAG, "index");
 		
-		topReadList(request);
+		readList(request);
 		
 		return "index";
 	}
@@ -74,18 +74,26 @@ public class BlogInfoController {
 		
 		model.addAttribute("blogInfo", blogInfo);
 		
-		topReadList(request);
+		readList(request);
 		
 		return "blog/detail";
 	}
 	
-	private void topReadList(HttpServletRequest request){
+	private void readList(HttpServletRequest request){
 		// 阅读量排行前5
 		@SuppressWarnings("unchecked")
 		List<BlogInfo> topBlogInfos = (List<BlogInfo>) request.getSession().getAttribute("topBlogInfos");
 		if (!(topBlogInfos != null && topBlogInfos.size() > 0)) {
-			topBlogInfos = blogInfoService.queryTopRead("5");
+			topBlogInfos = blogInfoService.queryRead("5", Constants.ORDER_BY_DESC);
 			request.getSession().setAttribute("topBlogInfos", topBlogInfos);
+		}
+		
+		// 阅读量排行前5
+		@SuppressWarnings("unchecked")
+		List<BlogInfo> footerBlogInfos = (List<BlogInfo>) request.getSession().getAttribute("footerBlogInfos");
+		if (!(footerBlogInfos != null && footerBlogInfos.size() > 0)) {
+			footerBlogInfos = blogInfoService.queryRead("5", Constants.ORDER_BY_ASC);
+			request.getSession().setAttribute("footerBlogInfos", footerBlogInfos);
 		}
 	}
 	

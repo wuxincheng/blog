@@ -1816,7 +1816,6 @@ hr{
 }
 
 .left-info-d {
-	color: #fff;
 	border-color: #ebccd1;
 	padding: 0px 1px 15px 1px;
 	margin: 10px 0px 10px 0px;
@@ -1824,11 +1823,19 @@ hr{
 	border-bottom: 1px solid #F0F0F0;
 }
 
+.left-info-s {
+	border-color: #ebccd1;
+	padding: 0px 1px 15px 1px;
+	margin: 10px 0px 10px 0px;
+	line-height: 30px;
+	border-bottom: 1px solid #F0F0F0;
+}
+
 .next-prev-info {
 	border-color: #ebccd1;
 	padding: 10px 10px 10px 10px;
 	margin: 20px 0px 20px 0px;
-	line-height: 30px;
+	line-height: 25px;
 	border: 1px solid #d0d0d0;
 }
 
