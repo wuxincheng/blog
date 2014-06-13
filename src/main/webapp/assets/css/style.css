@@ -1827,8 +1827,9 @@ hr{
 	border-color: #ebccd1;
 	padding: 0px 1px 15px 1px;
 	margin: 10px 0px 10px 0px;
-	line-height: 30px;
+	line-height: 25px;
 	border-bottom: 1px solid #F0F0F0;
+	font-size: 12px;
 }
 
 .next-prev-info {
