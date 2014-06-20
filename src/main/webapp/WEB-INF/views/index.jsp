@@ -23,11 +23,14 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-9" role="main">
+						
+						<!-- 
 						<div class="ya2dan-index-container">
 					        <div class="alert alert-info">
 								网站处于试运营阶段，有大量地方需要改进，欢迎提出宝贵的意见，联系方式：wuxinchenghappy@gmail.com
 							</div>
 				        </div>
+						 -->
 				        
 				        <!-- 
 				        <div class="bs-example">

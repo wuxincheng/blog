@@ -114,7 +114,11 @@ hr{
 
 /* Default Padding */
 
-.padd { padding: 0px 0; }
+.padd { 
+	padding: 0px 0;
+	border-right: 1px solid #E0E0E0;
+	margin: 15px 0px 10px 0px;
+}
 
 /* Social Media */
 
@@ -355,7 +359,7 @@ hr{
 	padding: 25px 10px; 
 	border:1px solid #f2f2f2;
 }
-	
+
 .pricing-table .table th { 
 	width: 25%;
 	font-size: 30px; 
@@ -609,7 +613,7 @@ hr{
 	top: 50%; 
 	margin-top: -20px;
 }
-	
+
 .member-img .social a i {
 	margin-left: 2px;
 	margin-right: 2px;
@@ -985,7 +989,7 @@ hr{
 	padding-bottom:10px;
 	padding-top:10px;
 	margin-bottom:10px;
-	border-top:1px solid #eee;
+	border-top:1px solid #E0E0E0;
 }
 
 .blog .grid .item .grid-entry .grid-img{
@@ -1554,15 +1558,15 @@ hr{
 		top: 80%; 
 		margin-top: -20px;
 	}
-	
+
 	.portfolio .p-element { width: 49.8%; }
-	
+
 	.blog .grid .item { width: 50% !important;	}
-	
+
 	.cta-content h3,
 	.cta-content p { text-align: center; }
 	.cta-content .cta-button { margin-top: 20px; }
-	
+
 	.contact-content {
 		max-width: 380px;
 		margin: 0 auto;
