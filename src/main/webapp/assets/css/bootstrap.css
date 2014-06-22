@@ -271,7 +271,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: Arial, ΢���ź�, sans-serif, "Helvetica Neue", Helvetica;
+  font-family: Arial, Î¢ÈíÑÅºÚ, sans-serif, "Helvetica Neue", Helvetica;
   font-size: 12px;
   line-height: 1.42857143;
   color: #333333;
@@ -749,7 +749,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1100px;
   }
 }
 .container-fluid {
@@ -5818,4 +5818,3 @@ button.close {
     color: #FCFDFE;
     text-decoration: none;
 }
-

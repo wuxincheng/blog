@@ -116,7 +116,6 @@ hr{
 
 .padd { 
 	padding: 0px 0;
-	border-right: 1px solid #E0E0E0;
 	margin: 15px 0px 10px 0px;
 }
 
@@ -1795,8 +1794,8 @@ hr{
 }
 
 .ya2dan-top-container {
-	padding: 5px 0px 0px 15px;
-	margin: 10px 0px 0px 00px;
+	padding: 0px 15px 0px 15px;
+	margin: 0px 0px 0px 00px;
 }
 
 .ya2dan-index-container {
@@ -1805,8 +1804,8 @@ hr{
 }
 
 .ya2dan-container {
-	padding: 10px 15px 10px 5px;
-	margin: 10px 0px 10px 10px;
+	padding: 0px 15px 10px 5px;
+	margin: 0px 0px 10px 10px;
 }
 
 .info-404 {
@@ -1825,6 +1824,15 @@ hr{
 	margin: 10px 0px 10px 0px;
 	line-height: 45px;
 	border-bottom: 1px solid #F0F0F0;
+	max-width: 253px;
+}
+
+.left-info-f {
+	border-color: #ebccd1;
+	padding: 0px 1px 15px 1px;
+	margin: 15px 0px 10px 0px;
+	border-bottom: 1px solid #F0F0F0;
+	max-width: 253px;
 }
 
 .left-info-s {
@@ -1834,6 +1842,7 @@ hr{
 	line-height: 25px;
 	border-bottom: 1px solid #F0F0F0;
 	font-size: 12px;
+	max-width: 253px;
 }
 
 .next-prev-info {
@@ -1853,4 +1862,15 @@ hr{
 .jshare-info {
 	padding: 0px 0px 20px 0px;
 	margin: 0px 0px 50px 0px;
+}
+
+.blog-post {
+	/**
+	border-right: 1px solid #E0E0E0;
+	 */
+	padding-right: 0px;
+}
+
+.blog-sidebar {
+	border-left: 1px solid #E0E0E0;
 }

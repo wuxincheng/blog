@@ -23,7 +23,6 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-9" role="main">
-						
 						<!-- 
 						<div class="ya2dan-index-container">
 					        <div class="alert alert-info">
@@ -103,7 +102,7 @@
 				        <p>&nbsp;</p>
 					</div>
 					
-					<div class="col-md-3">
+					<div class="col-md-3 blog-sidebar">
 						<jsp:include page="right.jsp" />
 					</div>
 				</div>
