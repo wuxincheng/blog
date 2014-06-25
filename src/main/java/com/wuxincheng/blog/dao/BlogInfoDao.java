@@ -1,6 +1,7 @@
 package com.wuxincheng.blog.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import com.wuxincheng.blog.model.BlogInfo;
 
@@ -12,6 +13,16 @@ import com.wuxincheng.blog.model.BlogInfo;
  */
 public interface BlogInfoDao {
 
+	/**
+	 * 分页查询
+	 * 
+	 * @param start
+	 * @param end
+	 * @param flag
+	 * @return
+	 */
+	public abstract List<BlogInfo> queryPager(Map<String, Object> params);
+	
 	/**
 	 * 查询所有文件信息
 	 * 
@@ -47,5 +58,12 @@ public interface BlogInfoDao {
 	 * @return
 	 */
 	public abstract List<BlogInfo> queryFooterRead(Integer top);
+	
+	/**
+	 * 统计总记录条数
+	 * 
+	 * @return
+	 */
+	public abstract Integer queryCount();
 	
 }

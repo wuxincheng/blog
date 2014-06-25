@@ -16,6 +16,8 @@
 						<ul class="nav navbar-nav">
 							<li <c:if test="${'index' eq navFlag}">class="active"</c:if>><a href="<%=request.getContextPath()%>/blog/list">首页</a></li>
 						</ul>
+						
+						<!-- 
 						<ul class="nav navbar-nav navbar-right">
 							<li class="dropdown">
 							  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -34,6 +36,7 @@
 							  </ul>
 							</li>
 						</ul>
+						 -->
 					</div>
 				</div>
 			</nav>

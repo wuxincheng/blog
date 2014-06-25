@@ -11,6 +11,7 @@
 <meta name="author" content="ResponsiveWebInc">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="<%=request.getContextPath()%>/assets/js/jquery.js"></script>
 
 <jsp:include page="base.jsp" />
 </head>
@@ -45,9 +46,9 @@
 						<section id="blog">
 							<div class="blog padd">
 								<c:choose>
-								<c:when test="${not empty blogInfos}">
+								<c:when test="${not empty pager.blogInfos}">
 								<div id="container" class="grid" style="position: relative;">
-									<c:forEach items="${blogInfos}" var="blogInfo" varStatus="s">
+									<c:forEach items="${pager.blogInfos}" var="blogInfo" varStatus="s">
 									<div class="item">
 										<div class="grid-entry">
 											<div class="entry-info">
@@ -95,11 +96,21 @@
 							</div>
 						</section>
 						
-						<!-- 
-				        <button type="button" class="btn btn-danger btn-block">点击加载更多</button>
-						 -->
-				        <button type="button" class="btn btn-danger btn-block">已经加载全部</button>
-				        <p>&nbsp;</p>
+						<div id="load-more-d" class="pager-squ">
+							<ul class="pager">
+								<li <c:if test="${'1' eq pager.currentPage}">class="disabled"</c:if>>
+									<a <c:if test="${pager.currentPage > 1}">href="<%=request.getContextPath()%>/blog/list?currentPage=${pager.currentPage-1}"</c:if>>上一页</a>
+								</li>
+								
+								<li <c:if test="${pager.lastPage eq pager.currentPage}">class="disabled"</c:if>>
+									<a <c:if test="${pager.currentPage < pager.lastPage}">href="<%=request.getContextPath()%>/blog/list?currentPage=${pager.currentPage+1}"</c:if>>下一页</a>
+								</li>
+								
+								<li class="">&nbsp;</li>
+								<li class=""><strong>${pager.currentPage}/${pager.lastPage}</strong></li>
+								<li class="">&nbsp;</li>
+							</ul>
+						</div>
 					</div>
 					
 					<div class="col-md-3 blog-sidebar">

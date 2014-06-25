@@ -1,6 +1,7 @@
 package com.wuxincheng.blog.dao.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
@@ -10,6 +11,12 @@ import com.wuxincheng.blog.model.BlogInfo;
 @Repository("blogInfoDao")
 public class BlogInfoDaoImpl extends BaseDao implements BlogInfoDao {
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<BlogInfo> queryPager(Map<String, Object> params) {
+		return this.getSqlMapClientTemplate().queryForList("BlogInfo.queryPager", params);
+	}
+	
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<BlogInfo> queryAll() {
@@ -36,6 +43,11 @@ public class BlogInfoDaoImpl extends BaseDao implements BlogInfoDao {
 	@Override
 	public List<BlogInfo> queryFooterRead(Integer top) {
 		return this.getSqlMapClientTemplate().queryForList("BlogInfo.queryFooterRead");
+	}
+	
+	@Override
+	public Integer queryCount() {
+		return (Integer)this.getSqlMapClientTemplate().queryForObject("BlogInfo.queryCount");
 	}
 
 }

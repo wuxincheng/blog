@@ -46,6 +46,7 @@
 		</div>
 		
 		<jsp:include page="footer.jsp" />
+		<jsp:include page="js_simple.jsp" />
 	</div>
 </body>
 </html>
