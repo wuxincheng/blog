@@ -267,13 +267,20 @@ a:hover {
   background-color: #f75353;
   border-color: #f75353;
 }
+
 /*********/
 /* Pager */
 /*********/
+.pager {
+	color: #8E8E8E;
+}
+
 .pager li a {
   background-color: #f75353;
   color: #ffffff;
+  /** 
   border: 1px solid #ed4747;
+   */
 }
 .pager li a:hover {
   background: #ed4747;

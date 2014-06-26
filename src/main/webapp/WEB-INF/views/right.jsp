@@ -2,49 +2,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 		
 		<!-- 新成微博 start -->
-		<div class="badger-left badger-notice" data-badger="G+&&FB">
-        </div>
-		<div class="left-info-f">
-		<div id="fb-root"></div>
-			<script>(function(d, s, id) {
-			  var js, fjs = d.getElementsByTagName(s)[0];
-			  if (d.getElementById(id)) return;
-			  js = d.createElement(s); js.id = id;
-			  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-			  fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-		</script>
-		<div class="fb-follow" data-href="https://www.facebook.com/wxcking" data-colorscheme="light" 
-			data-layout="button_count" data-show-faces="true"></div>
-		</div>
-		<!-- 新成微博 end -->
-		
-		<!-- 其它文章start -->
-		<div class="badger-left badger-notice" data-badger="相关博文">
-        </div>
-		<div class="left-info-s">
-			<c:forEach items="${footerBlogInfos}" var="footerBlogInfo" varStatus="s">
-			<a href="<%=request.getContextPath()%>/blog/detail?blogId=${footerBlogInfo.blogId}" target="_blank">
-			${s.index+1}. ${footerBlogInfo.blogTitle}<br>
-			</a>
-			</c:forEach>
-		</div>
-		<!-- 其它文章end -->
-		
-		<!-- 阅读排行start -->
-		<div class="badger-left badger-notice" data-badger="阅读排行">
-        </div>
-		<c:forEach items="${topBlogInfos}" var="topBlogInfo">
-		<div class="left-info-d">
-			<h5><strong><a href="<%=request.getContextPath()%>/blog/detail?blogId=${topBlogInfo.blogId}" target="_blank">${topBlogInfo.blogTitle}</a></strong></h5>
-			<a href="<%=request.getContextPath()%>/blog/detail?blogId=${topBlogInfo.blogId}" target="_blank">
-				<img src="${topBlogInfo.picLink}" class="img-responsive" />
-			</a>
-		</div>
-        </c:forEach>
-		<!-- 阅读排行end -->
-		
-		<!-- 新成微博 start -->
 		<div class="badger-left badger-notice" data-badger="新成微博">
         </div>
 		<div class="left-info-d">
@@ -80,3 +37,49 @@
 			</a>&nbsp;
 		</div>
 		<!-- 新成微博 end -->
+		
+		<!-- 阅读排行start -->
+		<div class="badger-left badger-notice" data-badger="阅读排行">
+        </div>
+        <div class="left-info-s">
+			<c:forEach items="${topBlogInfos}" var="topBlogInfo" varStatus="s">
+			<strong><a href="<%=request.getContextPath()%>/blog/detail?blogId=${topBlogInfo.blogId}" target="_blank">
+				<c:if test="${'1' eq s.index+1}">
+				<span class="label label-danger">${s.index+1}</span>
+				</c:if>
+				<c:if test="${'2' eq s.index+1}">
+				<span class="label label-warning">${s.index+1}</span>
+				</c:if>
+				<c:if test="${'3' eq s.index+1}">
+				<span class="label label-success">${s.index+1}</span>
+				</c:if>
+				<c:if test="${s.index+1 > 3}">
+				<span class="label label-default">${s.index+1}</span>
+				</c:if>
+				&nbsp;${topBlogInfo.blogTitle}</a></strong><br>
+	        </c:forEach>
+        </div>
+		<!-- 阅读排行end -->
+		
+		<!-- 博客类别 start -->
+		<div class="badger-left badger-notice" data-badger="博文标签">
+        </div>
+		<div class="left-info-d">
+			<c:forEach items="${types}" var="type">
+				<a href=""><span class="label label-danger">${type.typeName}</span></a>
+			</c:forEach>
+		</div>
+		<!-- 博客类别 end -->
+		
+		<!-- 其它文章start -->
+		<div class="badger-left badger-notice" data-badger="相关博文">
+        </div>
+		<div class="left-info-s">
+			<c:forEach items="${footerBlogInfos}" var="footerBlogInfo" varStatus="s">
+			<a href="<%=request.getContextPath()%>/blog/detail?blogId=${footerBlogInfo.blogId}" target="_blank">
+			<strong>${s.index+1}. ${footerBlogInfo.blogTitle}</strong><br>
+			</a>
+			</c:forEach>
+		</div>
+		<!-- 其它文章end -->
+		

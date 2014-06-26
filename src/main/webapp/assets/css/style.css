@@ -1824,7 +1824,17 @@ hr{
 	margin: 10px 0px 10px 0px;
 	line-height: 45px;
 	border-bottom: 1px solid #F0F0F0;
+	/** 
 	max-width: 253px;
+	 */
+}
+
+.left-info-l {
+	border-color: #ebccd1;
+	padding: 0px 1px 15px 1px;
+	margin: 10px 0px 10px 0px;
+	line-height: 40px;
+	border-bottom: 1px solid #F0F0F0;
 }
 
 .left-info-f {
@@ -1842,7 +1852,9 @@ hr{
 	line-height: 25px;
 	border-bottom: 1px solid #F0F0F0;
 	font-size: 12px;
+	/** 
 	max-width: 253px;
+	 */
 }
 
 .next-prev-info {
@@ -1876,11 +1888,17 @@ hr{
 }
 
 .pager-squ {
-	text-align: center; 
 	margin-top: 20px;
 	margin-right: 20px;
 	margin-bottom: 50px;
 	border-top: 0px solid #f75353;
+}
+
+.blog {
+	/** 
+	border: 1px solid #eee;
+	border-top: 0px solid #eee;
+	 */
 }
 
 /** scoial */

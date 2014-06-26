@@ -90,7 +90,7 @@
 							</div>
 			          		 -->
 	        			</div>
-						<div class="col-sm-3 blog-sidebar">
+						<div class="col-sm-3">
 							<jsp:include page="../right.jsp" />
 	      				</div>
 					</div>

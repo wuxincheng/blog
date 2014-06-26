@@ -74,7 +74,12 @@
 								          			<div class="pull-left"></div>
 								          			<div class="pull-right">
 									          			<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank" class="read-more">
-															<button type="button" class="btn btn-danger btn-sm">阅读详细</button> 
+															<span class="label label-danger">阅读详细</span>
+															
+															<!-- 
+															<button type="button" class="btn btn-danger btn-sm">阅读详细</button>
+															 -->
+															 
 															<i class="fa fa-angle-double-right"></i>
 														</a>
 								          			</div>
@@ -102,18 +107,18 @@
 									<a <c:if test="${pager.currentPage > 1}">href="<%=request.getContextPath()%>/blog/list?currentPage=${pager.currentPage-1}"</c:if>>上一页</a>
 								</li>
 								
-								<li <c:if test="${pager.lastPage eq pager.currentPage}">class="disabled"</c:if>>
-									<a <c:if test="${pager.currentPage < pager.lastPage}">href="<%=request.getContextPath()%>/blog/list?currentPage=${pager.currentPage+1}"</c:if>>下一页</a>
-								</li>
-								
 								<li class="">&nbsp;</li>
 								<li class=""><strong>${pager.currentPage}/${pager.lastPage}</strong></li>
 								<li class="">&nbsp;</li>
+								
+								<li <c:if test="${pager.lastPage eq pager.currentPage}">class="disabled"</c:if>>
+									<a <c:if test="${pager.currentPage < pager.lastPage}">href="<%=request.getContextPath()%>/blog/list?currentPage=${pager.currentPage+1}"</c:if>>下一页</a>
+								</li>
 							</ul>
 						</div>
 					</div>
 					
-					<div class="col-md-3 blog-sidebar">
+					<div class="col-md-3">
 						<jsp:include page="right.jsp" />
 					</div>
 				</div>

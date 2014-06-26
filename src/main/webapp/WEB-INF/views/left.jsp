@@ -1,10 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 		
+		<!-- 博客类别 start -->
+		<div class="badger-left badger-notice" data-badger="博文标签">
+        </div>
+		<div class="left-info-l">
+			<c:forEach items="${types}" var="type">
+				<a href=""><span class="label label-danger">${type.typeName}</span></a>
+			</c:forEach>
+		</div>
+		<!-- 博客类别 end -->
+		
 		<!-- 新成微博 start -->
 		<div class="badger-left badger-notice" data-badger="新成微博">
         </div>
-		<div class="left-info-d">
+		<div class="left-info-l">
 			<a href="https://plus.google.com/+XinChengWu" target="blank" rel="tooltip" data-placement="bottom" title="Google+">
 				<img src="<%=request.getContextPath()%>/assets/images/logo/googleplus_logo.png" width="30px" height="30px" />
 			</a>&nbsp;
