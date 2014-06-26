@@ -39,18 +39,6 @@
 				          			</div>
 				          			<div class="pull-right">
 				          			
-				          			
-				          			<div id="fb-root"></div>
-										<script>(function(d, s, id) {
-										  var js, fjs = d.getElementsByTagName(s)[0];
-										  if (d.getElementById(id)) return;
-										  js = d.createElement(s); js.id = id;
-										  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-										  fjs.parentNode.insertBefore(js, fjs);
-										}(document, 'script', 'facebook-jssdk'));</script>
-										
-										<div class="fb-share-button" data-href="https://developers.facebook.com" 
-											data-type="button_count"></div>
 				          			</div>
 				          		</div>
 			            		
@@ -61,24 +49,8 @@
 			            		
 			            		<p>&nbsp;</p>
 						        <div class="jshare-info">
-						        
-						        	<!-- 
 						        	<div class="pull-right">
 					          			<jsp:include page="../share_bar.jsp" />
-				          			</div>
-						        	 -->
-						        	 
-				          			<div class="pull-left">
-										<div id="fb-root"></div>
-										<script>(function(d, s, id) {
-										  var js, fjs = d.getElementsByTagName(s)[0];
-										  if (d.getElementById(id)) return;
-										  js = d.createElement(s); js.id = id;
-										  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-										  fjs.parentNode.insertBefore(js, fjs);
-										}(document, 'script', 'facebook-jssdk'));</script>
-										<div class="fb-like" data-href="https://developers.facebook.com" 
-											data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 				          			</div>
 				          		</div>
 			          		</div>
