@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.wuxincheng.blog.util.Constants;
+
 /**
  * 关于网站
  * 
@@ -20,9 +22,10 @@ public class AboutController {
 
 	@RequestMapping(value = "/")
 	public String about(Model model) {
-		logger.info("查询博客详细信息");
+		logger.info("关于网站");
+		model.addAttribute(Constants.TOP_NAV_FLAG, "about");
 		
-		return "menu/about";
+		return "about";
 	}
 	
 }

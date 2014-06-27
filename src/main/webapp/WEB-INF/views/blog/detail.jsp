@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>${blogInfo.blogTitle} - 新成博客</title>
+<title>${blogInfo.blogTitle} - 新成视野</title>
 <meta name="description" content="Your description">
 <meta name="keywords" content="Your,Keywords">
 <meta name="author" content="ResponsiveWebInc">
@@ -71,7 +71,7 @@
 		</div>
 		
 		<jsp:include page="../footer.jsp" />
-		<jsp:include page="../js_simple.jsp" />
+		<jsp:include page="../js_full.jsp" />
 	</div>
 </body>
 </html>

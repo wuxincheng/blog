@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.wuxincheng.blog.model.Message;
 import com.wuxincheng.blog.model.User;
 import com.wuxincheng.blog.service.MessageService;
+import com.wuxincheng.blog.util.Constants;
 
 /**
  * 用户留言
@@ -27,6 +28,14 @@ public class MessageController {
 	private static Logger logger = LoggerFactory.getLogger(MessageController.class);
 	
 	@Autowired MessageService messageService;
+	
+	@RequestMapping(value = "/")
+	public String message(Model model) {
+		// 其它参数设置
+		model.addAttribute(Constants.TOP_NAV_FLAG, "message");
+		
+		return "message";
+	}
 	
 	@RequestMapping(value = "/doUserMsg")
 	public String doUserMsg(@RequestParam String msgTitle, @RequestParam String msgContent, 

@@ -69,7 +69,7 @@
 			LEFT JOIN T_BLOG_TYPE t ON i.BLOG_TYPE = t.TYPE_ID
 		WHERE i.BLOG_STATE = '0'
 		ORDER BY i.READE_COUNT ASC
-		LIMIT 0, 10
+		LIMIT 0, 5
 	</select>
 	
 	<select id="queryByBlogId" parameterClass="java.lang.String" resultMap="BlogInfoMapping">
