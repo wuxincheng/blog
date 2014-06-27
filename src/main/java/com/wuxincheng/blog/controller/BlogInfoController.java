@@ -31,7 +31,7 @@ public class BlogInfoController {
 	@Resource private TypeService typeService;
 	
 	/** 每页显示条数 */
-	private final Integer pageSize = 9;
+	private final Integer pageSize = 18;
 	
 	@RequestMapping(value = "/list")
 	public String list(Model model, HttpServletRequest request, String currentPage) {
@@ -115,7 +115,7 @@ public class BlogInfoController {
 		@SuppressWarnings("unchecked")
 		List<BlogInfo> topBlogInfos = (List<BlogInfo>) request.getSession().getAttribute("topBlogInfos");
 		if (!(topBlogInfos != null && topBlogInfos.size() > 0)) {
-			topBlogInfos = blogInfoService.queryRead("5", Constants.ORDER_BY_DESC);
+			topBlogInfos = blogInfoService.queryRead("10", Constants.ORDER_BY_DESC);
 			request.getSession().setAttribute("topBlogInfos", topBlogInfos);
 		}
 		

@@ -77,6 +77,7 @@
 		<div class="left-info-s">
 			<c:forEach items="${footerBlogInfos}" var="footerBlogInfo" varStatus="s">
 			<a href="<%=request.getContextPath()%>/blog/detail?blogId=${footerBlogInfo.blogId}" target="_blank">
+			<span class="label label-info">${footerBlogInfo.blogTypeName}</span>
 			<strong>${s.index+1}. ${footerBlogInfo.blogTitle}</strong><br>
 			</a>
 			</c:forEach>
