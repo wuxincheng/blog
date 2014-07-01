@@ -15,8 +15,11 @@
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
 							<li <c:if test="${'index' eq navFlag}">class="active"</c:if>><a href="<%=request.getContextPath()%>/blog/list"><i class="fa fa-home"></i> 首页</a></li>
+							
+							<!-- 
 							<li <c:if test="${'about' eq navFlag}">class="active"</c:if>><a href="<%=request.getContextPath()%>/about/"><i class="fa fa-bell"></i> 关于网站</a></li>
 							<li <c:if test="${'message' eq navFlag}">class="active"</c:if>><a href="<%=request.getContextPath()%>/message/"><i class="fa fa-envelope"></i> 给我留言</a></li>
+							 -->
 							
 							<!-- 
 							<c:forEach items="${types}" var="type">

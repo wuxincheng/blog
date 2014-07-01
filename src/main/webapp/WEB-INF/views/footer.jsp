@@ -19,6 +19,9 @@
 						All Rights Reserved.
 					</div>
 				</div>
+				<div>
+					<a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备14029281</a>
+				</div>
 			</div>
 		</div>
 		<!-- Footer End -->
