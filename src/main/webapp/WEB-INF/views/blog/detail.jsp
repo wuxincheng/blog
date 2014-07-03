@@ -43,7 +43,7 @@
 				          		</div>
 			            		
 								<blockquote>
-					            	<strong>摘要：</strong>${blogInfo.subContent}
+					            	<strong>导读：</strong>${blogInfo.subContent}
 					            </blockquote>
 			            		<p>${blogInfo.blogContent}</p>
 			            		
@@ -63,7 +63,9 @@
 			          		 -->
 	        			</div>
 						<div class="col-sm-3">
-							<jsp:include page="../right.jsp" />
+							<div class="blog-right">
+								<jsp:include page="../right.jsp" />
+							</div>
 	      				</div>
 					</div>
 				</div>

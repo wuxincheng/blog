@@ -119,7 +119,9 @@
 					</div>
 					
 					<div class="col-md-3">
-						<jsp:include page="right.jsp" />
+						<div class="blog-right">
+							<jsp:include page="right.jsp" />
+						</div>
 					</div>
 				</div>
 			</div>
