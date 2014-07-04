@@ -20,7 +20,7 @@
 					</div>
 				</div>
 				<div>
-					<a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备14029281</a>
+					<a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备14029281号</a>
 				</div>
 			</div>
 		</div>

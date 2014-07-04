@@ -75,6 +75,11 @@
 								          			<div class="pull-right">
 									          			<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}" target="_blank" class="read-more">
 															<span class="label label-danger">阅读详细</span>
+															
+															<!-- 
+															<button type="button" class="btn btn-danger btn-sm">阅读详细</button>
+															 -->
+															 
 															<i class="fa fa-angle-double-right"></i>
 														</a>
 								          			</div>
