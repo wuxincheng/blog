@@ -7,3 +7,6 @@
 <link href="<%=request.getContextPath()%>/assets/css/font-awesome.min.css" rel="stylesheet">
 <link href="<%=request.getContextPath()%>/assets/css/style.css" rel="stylesheet">
 <link href="<%=request.getContextPath()%>/assets/css/less-style.css" rel="stylesheet">
+
+<script src="<%=request.getContextPath()%>/assets/js/jquery.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/bootstrap.min.js"></script>

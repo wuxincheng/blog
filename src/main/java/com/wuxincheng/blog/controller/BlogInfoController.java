@@ -12,6 +12,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.wuxincheng.blog.model.BlogInfo;
 import com.wuxincheng.blog.model.Type;
@@ -31,8 +33,16 @@ public class BlogInfoController {
 	@Resource private TypeService typeService;
 	
 	/** 每页显示条数 */
-	private final Integer pageSize = 18;
+	private final Integer pageSize = 20;
 	
+	/**
+	 * 首次访问首页
+	 * 
+	 * @param model
+	 * @param request
+	 * @param currentPage
+	 * @return
+	 */
 	@RequestMapping(value = "/list")
 	public String list(Model model, HttpServletRequest request, String currentPage) {
 		logger.info("查询所有博客信息");
@@ -77,6 +87,54 @@ public class BlogInfoController {
 		readList(request);
 		
 		return "index";
+	}
+	
+	/**
+	 * Ajax请求加载更多
+	 * 
+	 * @param model
+	 * @param request
+	 * @param currentPage
+	 * @return
+	 */
+	@RequestMapping(value = "/load", method = RequestMethod.POST)
+	@ResponseBody
+	public Map<String, Object> load(String currentPage) {
+		if (Validation.isBlank(currentPage) || !Validation.isInt(currentPage, "0+")) {
+			currentPage = "1";
+		}
+		
+		Integer current = Integer.parseInt(currentPage);
+		Integer start = null;
+		Integer end = null;
+		if (current > 1) {
+			start = (current - 1) * pageSize;
+			end = pageSize;
+		} else {
+			start = 0;
+			end = pageSize;
+		}
+		
+		Map<String, Object> pager = blogInfoService.queryPager(start, end);
+		
+		try {
+			if (pager != null && pager.size() > 0) {
+				pager.put("currentPage", currentPage);
+				pager.put("pageSize", pageSize);
+				pager.put("nextPage", current+1);
+				
+				Integer totalCount = (Integer)pager.get("totalCount");
+				Integer lastPage = (totalCount/pageSize);
+				Integer flag = (totalCount%pageSize)>0?1:0;
+				pager.put("lastPage", lastPage + flag);
+			} else {
+				logger.info("没有查询到博客信息");
+			}
+		} catch (Exception e) {
+			logger.error("在查询博客列表时出现异常", e);
+		}
+		
+		return pager;
 	}
 	
 	@RequestMapping(value = "/detail")

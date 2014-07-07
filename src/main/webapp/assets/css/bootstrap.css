@@ -747,9 +747,9 @@ pre code {
     width: 970px;
   }
 }
-@media (min-width: 1150px) {
+@media (min-width: 1110px) {
   .container {
-    width: 1100px;
+    width: 1080px;
   }
 }
 .container-fluid {
@@ -3697,8 +3697,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .container-fluid > .navbar-header,
   .container > .navbar-collapse,
   .container-fluid > .navbar-collapse {
-    margin-right: 0;
-    margin-left: 0;
+    margin-right: 20px;
+    margin-left: 5px;
   }
 }
 .navbar-static-top {

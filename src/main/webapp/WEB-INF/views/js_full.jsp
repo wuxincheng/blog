@@ -18,9 +18,9 @@
 		<script src="<%=request.getContextPath()%>/assets/js/main.js" type="text/javascript"></script>
 		<script src="<%=request.getContextPath()%>/assets/js/jquery.gmap.min.js"></script>
 		<script src="<%=request.getContextPath()%>/assets/js/jquery.nicescroll.min.js"></script>
-		<script src="<%=request.getContextPath()%>/assets/js/placeholders.js"></script>		
+		<script src="<%=request.getContextPath()%>/assets/js/placeholders.js"></script>
 		<script src="<%=request.getContextPath()%>/assets/js/respond.min.js"></script>
-		<script src="<%=request.getContextPath()%>/assets/js/html5shiv.js"></script>	
+		<script src="<%=request.getContextPath()%>/assets/js/html5shiv.js"></script>
 		<script src="<%=request.getContextPath()%>/assets/js/custom.js"></script>
 
 		<script>

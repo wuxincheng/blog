@@ -2,41 +2,29 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 		<div class="header">
-			<nav class="navbar" role="navigation">
+			<nav class="navbar navbar-fixed-top" role="navigation">
 				<div class="container">
 					<div class="navbar-header">
-						<!-- 
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 							<span class="sr-only">Toggle navigation</span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						 -->
+						
+						<!-- 
 						<a href="<%=request.getContextPath()%>/blog/list" class="navbar-brand">
 							&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-home"></i> 首页
 						</a>
+						 -->
 					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
-							<!-- 
 							<li <c:if test="${'index' eq navFlag}">class="active"</c:if>><a href="<%=request.getContextPath()%>/blog/list"><i class="fa fa-home"></i> 首页</a></li>
-							 -->
-							
-							<!-- 
 							<li <c:if test="${'about' eq navFlag}">class="active"</c:if>><a href="<%=request.getContextPath()%>/about/"><i class="fa fa-bell"></i> 关于网站</a></li>
 							<li <c:if test="${'message' eq navFlag}">class="active"</c:if>><a href="<%=request.getContextPath()%>/message/"><i class="fa fa-envelope"></i> 给我留言</a></li>
-							 -->
-							
-							<!-- 
-							<c:forEach items="${types}" var="type">
-							<li <c:if test="${'a' eq navFlag}">class="active"</c:if>><a href="<%=request.getContextPath()%>/blog/list">${type.typeName}</a></li>
-							</c:forEach>
-							 -->
-							
 						</ul>
 						
-						<!-- 
 						<ul class="nav navbar-nav navbar-right">
 							<li class="dropdown">
 							  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -55,17 +43,8 @@
 							  </ul>
 							</li>
 						</ul>
-						 -->
 					</div>
 				</div>
 			</nav>
 		</div>
-		
-		<!-- 
-		<div class="container">
-			<div class="blog-notice">
-				提示：“新成博客”更名为“新成视野”！
-			</div>
-		</div>
-		 -->
 		
