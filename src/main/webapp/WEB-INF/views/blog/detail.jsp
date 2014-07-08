@@ -73,7 +73,7 @@
 		</div>
 		
 		<jsp:include page="../footer.jsp" />
-		<jsp:include page="../_js.jsp" />
+		<jsp:include page="../js_full.jsp" />
 	</div>
 </body>
 </html>

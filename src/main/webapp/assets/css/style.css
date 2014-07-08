@@ -1000,7 +1000,7 @@ hr{
 }
 
 .blog-right {
-	padding: 45px 0px 10px 5px;
+	padding: 45px 0px 10px 0px;
 	/**
 	margin: 15px 10px 0px 0px;
 	border: 1px solid #E0E0E0;
@@ -1909,7 +1909,8 @@ hr{
 
 .pager-squ {
 	margin-top: 0px;
-	margin-right: 10px;
+	margin-right: 5px;
+	margin-left: 5px;
 	margin-bottom: 10px;
 	border-bottom: 0px solid #f75353;
 }
