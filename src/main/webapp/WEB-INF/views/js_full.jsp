@@ -11,7 +11,11 @@
 		
 		<script src="<%=request.getContextPath()%>/assets/js/jquery.stellar.min.js"></script>
 		<script src="<%=request.getContextPath()%>/assets/js/waypoints.min.js"></script>
+		
+		<!-- ========= 控制布局 ======== -->
 		<script src="<%=request.getContextPath()%>/assets/js/masonry.pkgd.min.js"></script>
+		<!-- ========================= -->
+		
 		<script src="<%=request.getContextPath()%>/assets/js/isotope.js"></script>
 		<script src="<%=request.getContextPath()%>/assets/js/jquery.magnific-popup.min.js"></script>
 		<script src="<%=request.getContextPath()%>/assets/js/jquery.countTo.js"></script>
