@@ -16,6 +16,8 @@
 		<script src="<%=request.getContextPath()%>/assets/js/masonry.pkgd.min.js"></script>
 		<!-- ========================= -->
 		
+		<script src="<%=request.getContextPath()%>/assets/js/jbox-maker.js"></script>
+		
 		<script src="<%=request.getContextPath()%>/assets/js/isotope.js"></script>
 		<script src="<%=request.getContextPath()%>/assets/js/jquery.magnific-popup.min.js"></script>
 		<script src="<%=request.getContextPath()%>/assets/js/jquery.countTo.js"></script>

@@ -15,7 +15,7 @@
 
 <script>
 	$(document).ready(function() {
- 		$("#load-more").click(function(){
+ 		$("#load-more2").click(function(){
  			$.ajax({
  	             type: "POST",
  	             url: "<%=request.getContextPath()%>/blog/load",
@@ -53,6 +53,29 @@
 			});
 		});
 	});
+</script>
+
+<script>
+  $(function(){
+    var $container = $('#container');
+    
+    $container.masonry({
+      itemSelector: '.box',
+      columnWidth: 100,
+      isAnimated: !Modernizr.csstransitions
+    });
+    
+    $('#prepend').click(function(){
+      var $boxes = $( boxMaker.makeBoxes() );
+      $container.prepend( $boxes ).masonry( 'reload' );
+    });
+    
+    $('#load-more').click(function(){
+      var $boxes = $( boxMaker.makeBoxes() );
+      $container.append( $boxes ).masonry( 'appended', $boxes );
+    });
+    
+  });
 </script>
 
 </head>
