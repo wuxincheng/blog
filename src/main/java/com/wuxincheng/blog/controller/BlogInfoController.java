@@ -33,7 +33,7 @@ public class BlogInfoController {
 	@Resource private TypeService typeService;
 	
 	/** 每页显示条数 */
-	private final Integer pageSize = 50;
+	private final Integer pageSize = 40;
 	
 	/**
 	 * 首次访问首页
