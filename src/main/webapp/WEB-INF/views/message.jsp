@@ -26,6 +26,12 @@
 			            		<div class="badger-left badger-notice" data-badger="给我留言">
        			 				</div>
        			 				<p>&nbsp;</p>
+       			 				<h5 style="line-height: 25px;">
+     			 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     			 					此处为 <span class="label label-danger">新成视野（WUXINCHENG.COM.CN）</span> 留言处，
+     			 					自从网站运营到现在得道了广大网友的支持，网站在很多的地方需要有改进，若有什么意见欢迎留言！
+       			 				</h5>
+       			 				<p>&nbsp;</p>
 								<form role="form">
 									<div class="form-group">
 										<label for="email">我的邮箱（Email）</label>
@@ -51,7 +57,7 @@
 		</div>
 		
 		<jsp:include page="footer.jsp" />
-		<jsp:include page="js_full.jsp" />
+		<jsp:include page="js_simple.jsp" />
 	</div>
 </body>
 </html>
