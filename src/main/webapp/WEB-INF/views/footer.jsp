@@ -4,9 +4,6 @@
 		<div class="footer text-center">
 			<div class="container">
 				<div>
-					免责声明：新成视野（原：新成博客）所有内容来源于互联网。如果本站部分内容侵犯您的权益，请您告知！
-				</div>
-				<div>
 					Email：<span class="label label-warning">wuxinchenghappy@gmail.com</span> / 
 					Phone：<span class="label label-info">（+86）133-011-77-895</span>
 				</div>

@@ -1841,7 +1841,7 @@ hr{
 	padding: 0px 10px 15px 1px;
 	margin: 10px 0px 10px 0px;
 	line-height: 40px;
-	border-bottom: 1px solid #F0F0F0;
+	border-bottom: 0px solid #F0F0F0;
 	/** 
 	max-width: 253px;
 	 */
@@ -1868,7 +1868,7 @@ hr{
 	padding: 0px 1px 15px 1px;
 	margin: 10px 0px 10px 0px;
 	line-height: 25px;
-	border-bottom: 1px solid #F0F0F0;
+	border-bottom: 0px solid #F0F0F0;
 	font-size: 12px;
 	/** 
 	max-width: 253px;
@@ -1896,8 +1896,8 @@ hr{
 
 .blog-post {
 	border-right: 1px solid #E0E0E0;
-	padding: 5px 10px 10px 0px;
-	margin: 60px 10px 10px 0px;
+	padding: 0px 10px 10px 0px;
+	margin: 61px 10px 10px 0px;
 	/**
 	background-color: #F9F9F9;
 	 */
@@ -1992,4 +1992,55 @@ hr{
 
 .loading span {
 	font-size: 1.6em
+}
+
+.sblog {
+	margin: 2px 2px 2px 2px;
+	
+	border: 0px solid #ECECEC;
+	/** 
+	-webkit-border-radius: 0px;
+	   -moz-border-radius: 0px;
+			border-radius: 0px;
+	-webkit-box-shadow: 0px 0px 20px rgb(233, 224, 224);
+	   -moz-box-shadow: 0px 0px 20px rgb(233, 224, 224);
+			box-shadow: 0px 0px 20px rgb(233, 224, 224);
+	 */
+}
+
+.thumbnail {
+	border: 0px solid #dddddd;
+}
+
+.sblog-bottom {
+	padding: 5px 0px 5px 0px;
+	/**
+	margin: 15px 10px 0px 0px;
+	border: 1px solid #E0E0E0;
+	background-color: #FCFCFC;
+	 */
+}
+
+.nav-info {
+	border: 0px solid #ECECEC;
+	padding: 10px 10px 10px 0px;
+	margin: 5px 5px 10px 5px;
+	font-size: 12px;
+	border-radius:0px;
+}
+
+.tip-info {
+	border: 2px solid #ECECEC;
+	padding: 10px 10px 10px 10px;
+	margin: 5px 5px 10px 5px;
+	font-size: 10px;
+	border-radius:0px;
+}
+
+.link-info {
+	border: 1px solid #ECECEC;
+	padding: 10px 10px 10px 10px;
+	margin: 5px 5px 10px 5px;
+	font-size: 10px;
+	border-radius:0px;
 }

@@ -15,7 +15,7 @@
 
 <script>
 	$(document).ready(function() {
- 		$("#load-more2").click(function(){
+ 		$("#load-more").click(function(){
  			$.ajax({
  	             type: "POST",
  	             url: "<%=request.getContextPath()%>/blog/load",
@@ -55,29 +55,6 @@
 	});
 </script>
 
-<script>
-  $(function(){
-    var $container = $('#container');
-    
-    $container.masonry({
-      itemSelector: '.box',
-      columnWidth: 100,
-      isAnimated: !Modernizr.csstransitions
-    });
-    
-    $('#prepend').click(function(){
-      var $boxes = $( boxMaker.makeBoxes() );
-      $container.prepend( $boxes ).masonry( 'reload' );
-    });
-    
-    $('#load-more').click(function(){
-      var $boxes = $( boxMaker.makeBoxes() );
-      $container.append( $boxes ).masonry( 'appended', $boxes );
-    });
-    
-  });
-</script>
-
 </head>
 
 <body>
@@ -86,6 +63,14 @@
 		
 		<div class="container">
 			<div class="blog padd">
+				<!-- 
+				<div class="nav-info">
+					<a href="#"><i class="fa fa-home"></i> 首页</a> &nbsp;
+					<i class="fa fa-angle-right"></i> &nbsp;<a href="#">全部</a> &nbsp;
+					<i class="fa fa-angle-right"></i> &nbsp;程序员
+				</div>
+				 -->
+				
 				<c:choose>
 				<c:when test="${not empty pager.blogInfos}">
 				<div id="container" class="grid" style="position: relative;">
@@ -140,9 +125,79 @@
 				</c:choose>
 			</div>
 		
-			<input type="hidden" id="currentPage" name="currentPage" value="${currentPage+1}" />
 			<div id="load-more-d" class="pager-squ">
-				<button id="load-more" name="load-more" type="button" class="btn btn-default btn-block">点击加载更多</button>
+				<ul class="pager">
+					<li <c:if test="${'1' eq pager.currentPage}">class="disabled"</c:if>>
+						<a <c:if test="${pager.currentPage > 1}">href="<%=request.getContextPath()%>/blog/list?currentPage=${pager.currentPage-1}"</c:if>>上一页</a>
+					</li>
+					
+					<li class="">&nbsp;</li>
+					<li class=""><strong>${pager.currentPage}/${pager.lastPage}</strong></li>
+					<li class="">&nbsp;</li>
+					
+					<li <c:if test="${pager.lastPage eq pager.currentPage}">class="disabled"</c:if>>
+						<a <c:if test="${pager.currentPage < pager.lastPage}">href="<%=request.getContextPath()%>/blog/list?currentPage=${pager.currentPage+1}"</c:if>>下一页</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-md-6">
+					<div class="thumbnail">
+						<div class="sblog">
+							<div class="sblog-bottom">
+								<div class="badger-left badger-notice" data-badger="阅读推荐">
+				        		</div>
+							</div>
+							<div class="left-info-s">
+				    			<c:forEach items="${topBlogInfos}" var="topBlogInfo" varStatus="s">
+								<strong><a href="<%=request.getContextPath()%>/blog/detail?blogId=${topBlogInfo.blogId}" target="_blank">
+									<c:if test="${'1' eq s.index+1}">
+									<span class="label label-danger">${s.index+1}</span>
+									</c:if>
+									<c:if test="${'2' eq s.index+1}">
+									<span class="label label-warning">${s.index+1}</span>
+									</c:if>
+									<c:if test="${'3' eq s.index+1}">
+									<span class="label label-success">${s.index+1}</span>
+									</c:if>
+									<c:if test="${s.index+1 > 3}">
+									<span class="label label-default">${s.index+1}</span>
+									</c:if>
+									&nbsp;${topBlogInfo.blogTitle}</a></strong><br>
+						        </c:forEach>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-6">
+					<div class="thumbnail">
+						<div class="sblog">
+							<div class="sblog-bottom">
+								<div class="badger-left badger-notice" data-badger="阅读推荐">
+				        		</div>
+							</div>
+							<div class="left-info-s">
+				    			<c:forEach items="${footerBlogInfos}" var="footerBlogInfo" varStatus="s">
+								<a href="<%=request.getContextPath()%>/blog/detail?blogId=${footerBlogInfo.blogId}" target="_blank">
+								<span class="label label-info">${footerBlogInfo.blogTypeName}</span>
+								<strong>${s.index+1}. ${footerBlogInfo.blogTitle}</strong><br>
+								</a>
+								</c:forEach>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="tip-info">
+				<strong>免责声明：</strong>
+				<a href="http://wuxincheng.com.cn">WUXINCHENG.COM.CN</a>，
+				即新成视野（原：新成博客）所有内容来源于互联网。如果本站部分内容侵犯您的权益，请您告知！
 			</div>
 		</div>
 		

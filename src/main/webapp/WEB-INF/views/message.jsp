@@ -41,7 +41,9 @@
 			          		</div>
 	        			</div>
 						<div class="col-sm-3">
-							<jsp:include page="right.jsp" />
+							<div class="blog-right">
+								<jsp:include page="right_single.jsp" />
+							</div>
 	      				</div>
 					</div>
 				</div>
