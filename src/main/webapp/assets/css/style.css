@@ -116,7 +116,7 @@ hr{
 
 .padd { 
 	padding: 0px 0;
-	margin: 55px 0px 10px 0px;
+	margin: 0px 0px 10px 0px;
 }
 
 /* Social Media */
@@ -991,21 +991,13 @@ hr{
 	-webkit-border-radius: 0px;
 	   -moz-border-radius: 0px;
 			border-radius: 0px;
-	-webkit-box-shadow: 0px 0px 20px rgb(233, 224, 224);
-	   -moz-box-shadow: 0px 0px 20px rgb(233, 224, 224);
-			box-shadow: 0px 0px 20px rgb(233, 224, 224);
-	/**
-	background-color: #F9F9F9;
-	 */
+	-webkit-box-shadow: 0px 0px 0px rgb(233, 224, 224);
+	   -moz-box-shadow: 0px 0px 0px rgb(233, 224, 224);
+			box-shadow: 0px 0px 0px rgb(233, 224, 224);
 }
 
 .blog-right {
 	padding: 45px 0px 10px 0px;
-	/**
-	margin: 15px 10px 0px 0px;
-	border: 1px solid #E0E0E0;
-	background-color: #FCFCFC;
-	 */
 }
 
 .blog .grid .item .grid-entry .grid-img{
@@ -1447,13 +1439,9 @@ hr{
 
 /* Footer */
 .footer {
-	padding: 20px 0px 30px 0px;
+	padding: 20px 10px 30px 10px;
 	border-top:1px solid #f5f5f5;
-    margin: 10px 0px 0px 0px;
-    background: none repeat scroll 0% 0% #FFF;
-    border: 0px none;
-    border-radius: 0px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px 5px 0px 5px;
     font-size: 12px;
     line-height: 28px;
 }
@@ -1478,7 +1466,7 @@ hr{
 	right:20px;
 	z-index:500;
 	background:rgba(0, 0, 0, 0.3);
-	border-radius: 5px;
+	border-radius: 20px;
 }
 
 .totop a, .totop a:visited{
@@ -1496,10 +1484,6 @@ hr{
 }
 
 /* To Top Ends */
-
-/* Responsive CSS */
-
-/* Mobile phones */
 
 @media (max-width: 400px){
 	.portfolio .p-element { width: 100% !important; }
@@ -1813,7 +1797,7 @@ hr{
 
 .ya2dan-top-container {
 	padding: 0px 15px 0px 15px;
-	margin: 0px 0px 0px 00px;
+	margin: 0px 0px 0px 0px;
 }
 
 .ya2dan-index-container {
@@ -1822,8 +1806,8 @@ hr{
 }
 
 .ya2dan-container {
-	padding: 0px 5px 10px 0px;
-	margin: 0px 0px 10px 5px;
+	padding: 0px 5px 0px 0px;
+	margin: 0px 0px 0px 5px;
 }
 
 .info-404 {
@@ -1865,42 +1849,54 @@ hr{
 
 .left-info-s {
 	border-color: #ebccd1;
-	padding: 0px 1px 15px 1px;
 	margin: 10px 0px 10px 0px;
 	line-height: 25px;
-	border-bottom: 0px solid #F0F0F0;
 	font-size: 12px;
-	/** 
-	max-width: 253px;
-	 */
+}
+
+.left-info-bt {
+	border-color: #ebccd1;
+	padding: 5px 1px 30px 1px;
+	margin: 0px 0px 0px 0px;
+	line-height: 25px;
+	font-size: 12px;
+	border-bottom:1px dashed #ADADAD; height:1px
 }
 
 .next-prev-info {
 	border-color: #ebccd1;
 	padding: 10px 10px 10px 10px;
-	margin: 20px 0px 20px 0px;
+	margin: 20px 0px 0px 0px;
 	line-height: 25px;
-	border: 1px solid #d0d0d0;
+	border: 1px solid #E0E0E0;
 }
 
 .share-info {
-	padding: 5px 0px 10px 0px;
+	padding: 0px 0px 10px 0px;
 	margin: 0px 0px 20px 0px;
 	font-size: 12px;
 }
 
 .jshare-info {
-	padding: 0px 0px 20px 0px;
-	margin: 0px 0px 50px 0px;
+	padding: 0px 0px 10px 0px;
+	margin: 10px 0px 20px 0px;
 }
 
 .blog-post {
-	border-right: 1px solid #E0E0E0;
-	padding: 0px 10px 10px 0px;
-	margin: 61px 10px 10px 0px;
-	/**
-	background-color: #F9F9F9;
-	 */
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.blog-post-main {
+	padding: 0px 15px 30px 15px;
+	margin: 0px 0px 0px 0px;
+	border: 1px solid #ECECEC;
+	-webkit-border-radius: 0px;
+	   -moz-border-radius: 0px;
+			border-radius: 0px;
+	-webkit-box-shadow: 0px 0px 0px rgb(233, 224, 224);
+	   -moz-box-shadow: 0px 0px 0px rgb(233, 224, 224);
+			box-shadow: 0px 0px 0px rgb(233, 224, 224);
 }
 
 .blog-sidebar {
@@ -1996,16 +1992,7 @@ hr{
 
 .sblog {
 	margin: 2px 2px 2px 2px;
-	
 	border: 0px solid #ECECEC;
-	/** 
-	-webkit-border-radius: 0px;
-	   -moz-border-radius: 0px;
-			border-radius: 0px;
-	-webkit-box-shadow: 0px 0px 20px rgb(233, 224, 224);
-	   -moz-box-shadow: 0px 0px 20px rgb(233, 224, 224);
-			box-shadow: 0px 0px 20px rgb(233, 224, 224);
-	 */
 }
 
 .thumbnail {
@@ -2014,11 +2001,6 @@ hr{
 
 .sblog-bottom {
 	padding: 5px 0px 5px 0px;
-	/**
-	margin: 15px 10px 0px 0px;
-	border: 1px solid #E0E0E0;
-	background-color: #FCFCFC;
-	 */
 }
 
 .nav-info {
@@ -2030,7 +2012,7 @@ hr{
 }
 
 .tip-info {
-	border: 2px solid #ECECEC;
+	border: 1px solid #ECECEC;
 	padding: 10px 10px 10px 10px;
 	margin: 5px 5px 10px 5px;
 	font-size: 10px;
@@ -2043,4 +2025,20 @@ hr{
 	margin: 5px 5px 10px 5px;
 	font-size: 10px;
 	border-radius:0px;
+}
+
+.per-info-left {
+	border: 1px solid #ECECEC;
+	padding: 6px 5px 5px 5px;
+	margin: 55px 5px 10px 5px;
+	font-size: 10px;
+	text-align: left;
+}
+
+.per-info-right {
+	border: 1px solid #ECECEC;
+	padding: 6px 5px 5px 5px;
+	margin: 55px 5px 10px 5px;
+	font-size: 10px;
+	line-height:40px !important;
 }

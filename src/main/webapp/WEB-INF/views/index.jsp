@@ -13,6 +13,9 @@
 
 <jsp:include page="base.jsp" />
 
+<style type="text/css">
+</style>
+
 <script>
 	$(document).ready(function() {
  		$("#load-more").click(function(){
@@ -142,64 +145,7 @@
 			</div>
 		</div>
 		
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-6 col-md-6">
-					<div class="thumbnail">
-						<div class="sblog">
-							<div class="sblog-bottom">
-								<div class="badger-left badger-notice" data-badger="阅读推荐">
-				        		</div>
-							</div>
-							<div class="left-info-s">
-				    			<c:forEach items="${topBlogInfos}" var="topBlogInfo" varStatus="s">
-								<strong><a href="<%=request.getContextPath()%>/blog/detail?blogId=${topBlogInfo.blogId}" target="_blank">
-									<c:if test="${'1' eq s.index+1}">
-									<span class="label label-danger">${s.index+1}</span>
-									</c:if>
-									<c:if test="${'2' eq s.index+1}">
-									<span class="label label-warning">${s.index+1}</span>
-									</c:if>
-									<c:if test="${'3' eq s.index+1}">
-									<span class="label label-success">${s.index+1}</span>
-									</c:if>
-									<c:if test="${s.index+1 > 3}">
-									<span class="label label-default">${s.index+1}</span>
-									</c:if>
-									&nbsp;${topBlogInfo.blogTitle}</a></strong><br>
-						        </c:forEach>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-md-6">
-					<div class="thumbnail">
-						<div class="sblog">
-							<div class="sblog-bottom">
-								<div class="badger-left badger-notice" data-badger="阅读推荐">
-				        		</div>
-							</div>
-							<div class="left-info-s">
-				    			<c:forEach items="${footerBlogInfos}" var="footerBlogInfo" varStatus="s">
-								<a href="<%=request.getContextPath()%>/blog/detail?blogId=${footerBlogInfo.blogId}" target="_blank">
-								<span class="label label-info">${footerBlogInfo.blogTypeName}</span>
-								<strong>${s.index+1}. ${footerBlogInfo.blogTitle}</strong><br>
-								</a>
-								</c:forEach>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="container">
-			<div class="tip-info">
-				<strong>免责声明：</strong>
-				<a href="http://wuxincheng.com.cn">WUXINCHENG.COM.CN</a>，
-				即新成视野（原：新成博客）所有内容来源于互联网。如果本站部分内容侵犯您的权益，请您告知！
-			</div>
-		</div>
+		<jsp:include page="index_footer_content.jsp" />
 		
 		<jsp:include page="footer.jsp" />
 		<jsp:include page="js_full.jsp" />
