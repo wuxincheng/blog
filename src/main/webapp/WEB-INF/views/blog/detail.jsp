@@ -36,9 +36,9 @@
 			            		
 				            		<div class="share-info">
 					          			<div class="pull-left">
-					            			<i class="fa fa-bookmark"></i> ${blogInfo.blogTypeName} &nbsp;&nbsp;&nbsp;&nbsp;
-											<i class="fa fa-calendar"></i> ${blogInfo.updateTime} &nbsp;&nbsp;&nbsp;&nbsp;
-											<i class="fa fa-eye"></i> <fmt:formatNumber value="${blogInfo.readCount}" pattern="###,###,###,##0" />次阅读&nbsp;&nbsp;&nbsp;&nbsp;
+					            			<i class="fa fa-bookmark"></i> ${blogInfo.blogTypeName} &nbsp;&nbsp;
+											<i class="fa fa-calendar"></i> ${blogInfo.updateTime} &nbsp;&nbsp;
+											<i class="fa fa-eye"></i> <fmt:formatNumber value="${blogInfo.readCount}" pattern="###,###,###,##0" />次阅读
 					          			</div>
 					          			<div class="pull-right">
 					          			
@@ -48,11 +48,10 @@
 									<blockquote>
 						            	<strong>导读：</strong>${blogInfo.subContent}
 						            </blockquote>
+						            
 				            		<p>${blogInfo.blogContent}</p>
 				            		 
 				            		<hr>
-				            		
-				            		分享到：<br>
 				            		
 							        <div class="jshare-info">
 							        	<div class="pull-left">

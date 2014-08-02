@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 		
 		<div class="container">
 			<div class="row">
@@ -12,7 +13,6 @@
 							</div>
 							<c:forEach items="${topBlogInfos}" var="topBlogInfo" varStatus="s">
 							<div class="left-info-bt">
-				    			<div class="pull-left">
 			            			<strong><a href="<%=request.getContextPath()%>/blog/detail?blogId=${topBlogInfo.blogId}" target="_blank">
 									<c:if test="${'1' eq s.index+1}">
 									<span class="label label-danger">${s.index+1}</span>
@@ -26,12 +26,12 @@
 									<c:if test="${s.index+1 > 3}">
 									<span class="label label-default">${s.index+1}</span>
 									</c:if>
-									&nbsp;${topBlogInfo.blogTitle}</a></strong>
-			          			</div>
-			          			<div class="pull-right">
-			          				<i class="fa fa-eye"></i> 
-			          				阅读${topBlogInfo.readCount}次
-			          			</div>
+									&nbsp;${topBlogInfo.blogTitle}</a></strong>&nbsp;
+									(<fmt:formatNumber value="${topBlogInfo.readCount}" pattern="###,###,###,##0" />)
+									<!-- 
+									&nbsp;&nbsp;
+			          				<i class="fa fa-eye"></i> ${topBlogInfo.readCount}次
+									 -->
 							</div>
 							</c:forEach>
 						</div>
@@ -46,16 +46,11 @@
 							</div>
 							<c:forEach items="${footerBlogInfos}" var="footerBlogInfo" varStatus="s">
 							<div class="left-info-bt">
-				    			<div class="pull-left">
-			            			<a href="<%=request.getContextPath()%>/blog/detail?blogId=${footerBlogInfo.blogId}" target="_blank">
-			            			<span class="label label-default">${s.index+1}</span>
-									<strong> ${footerBlogInfo.blogTitle}</strong><br>
-									</a>
-			          			</div>
-			          			<div class="pull-right">
-			          				<i class="fa fa-bookmark"></i> 
-			          				${footerBlogInfo.blogTypeName}
-			          			</div>
+		            			<a href="<%=request.getContextPath()%>/blog/detail?blogId=${footerBlogInfo.blogId}" target="_blank">
+		            			<span class="label label-default">${s.index+1}</span>
+								&nbsp;<strong> ${footerBlogInfo.blogTitle}</strong>
+								</a>
+								&nbsp;(${footerBlogInfo.blogTypeName})
 							</div>
 							</c:forEach>
 						</div>

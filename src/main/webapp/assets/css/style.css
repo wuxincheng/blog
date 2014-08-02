@@ -1856,11 +1856,11 @@ hr{
 
 .left-info-bt {
 	border-color: #ebccd1;
-	padding: 5px 1px 30px 1px;
+	padding: 5px 1px 5px 1px;
 	margin: 0px 0px 0px 0px;
 	line-height: 25px;
 	font-size: 12px;
-	border-bottom:1px dashed #ADADAD; height:1px
+	border-bottom:1px dashed #ADADAD;
 }
 
 .next-prev-info {
@@ -1880,6 +1880,7 @@ hr{
 .jshare-info {
 	padding: 0px 0px 10px 0px;
 	margin: 10px 0px 20px 0px;
+	font-size: 12px;
 }
 
 .blog-post {
