@@ -189,4 +189,33 @@ public class BlogInfoController {
 		request.getSession().setAttribute("types", types);
 	}
 	
+	@RequestMapping(value = "/detailMobile")
+	public String detailMobile(HttpServletRequest request, String blogId, Model model) {
+		logger.info("查询博客详细信息，blogId=" + blogId);
+		
+		if (Validation.isBlank(blogId)) {
+			return "404";
+		}
+		
+		if (!Validation.isInt(blogId, "0+")) {
+			return "404";
+		}
+		
+		BlogInfo blogInfo = null;
+		
+		blogInfo = blogInfoService.queryByBlogId(blogId);
+
+		if (null == blogInfo) {
+			logger.warn("博客信息信息，blogId=" + blogId + "，已跳转到404页面");
+			return "404";
+		}
+		
+		// 更新博客访问量
+		blogInfoService.updateReadCount(blogId);
+		
+		model.addAttribute("blogInfo", blogInfo);
+		
+		return "blog/detail_mobile";
+	}
+	
 }

@@ -62,7 +62,7 @@
 			<div class="per-info-right">
 				<div class="row">
 	       			<div class="col-sm-5">
-	       				<a href="https://wuxincheng.com.cn">
+	       				<a href="http://www.wuxincheng.com.cn">
 							<img src="<%=request.getContextPath()%>/assets/img/wxc-pi.png" />
 						</a>
 	       			</div>
