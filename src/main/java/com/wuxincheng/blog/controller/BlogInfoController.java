@@ -34,6 +34,7 @@ public class BlogInfoController {
 	
 	/** 每页显示条数 */
 	private final Integer pageSize = 40;
+	private final Integer pageSizeMobile = 10;
 	
 	/**
 	 * 首次访问首页
@@ -87,6 +88,51 @@ public class BlogInfoController {
 		readList(request);
 		
 		return "index";
+	}
+	
+	/**
+	 * 首页
+	 */
+	@RequestMapping(value = "/mobileList")
+	public String mobileList(Model model, HttpServletRequest request, String currentPage) {
+		logger.info("查询所有博客信息");
+
+		if (Validation.isBlank(currentPage) || !Validation.isInt(currentPage, "0+")) {
+			currentPage = "1";
+		}
+		
+		Integer current = Integer.parseInt(currentPage);
+		Integer start = null;
+		Integer end = null;
+		if (current > 1) {
+			start = (current - 1) * pageSizeMobile;
+			end = pageSizeMobile;
+		} else {
+			start = 0;
+			end = pageSizeMobile;
+		}
+		
+		Map<String, Object> pager = blogInfoService.queryPager(start, end);
+		
+		try {
+			if (pager != null && pager.size() > 0) {
+				pager.put("currentPage", currentPage);
+				pager.put("pageSize", pageSizeMobile);
+				
+				Integer totalCount = (Integer)pager.get("totalCount");
+				Integer lastPage = (totalCount/pageSizeMobile);
+				Integer flag = (totalCount%pageSizeMobile)>0?1:0;
+				pager.put("lastPage", lastPage + flag);
+				model.addAttribute("pager", pager);
+			} else {
+				model.addAttribute("blogInfos", Collections.EMPTY_LIST);
+				logger.info("没有查询到博客信息");
+			}
+		} catch (Exception e) {
+			logger.error("在查询博客列表时出现异常", e);
+		}
+		
+		return "mobileList";
 	}
 	
 	/**

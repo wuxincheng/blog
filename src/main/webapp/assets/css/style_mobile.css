@@ -3,7 +3,7 @@
 
 body{
 	font-family: Arial, 微软雅黑, Verdana, Geneva, Tahoma, 宋体, 'Open Sans', sans-serif;
-	background: #fff;
+	background: #f0f0f0;
 	font-size: 16px;
 }
 
@@ -14,10 +14,18 @@ p{
 }
 
 .container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 10px;
-  padding-right: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 8px;
+	padding-right: 8px;
+	background: #fff;
+	border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
 }
 
 .ya2dan-container {
@@ -30,10 +38,9 @@ p{
 }
 
 .blog-post-main {
-	padding: 0px 0px 10px 0px;
+	padding: 1px 0px 10px 0px;
 	margin: 0px 0px 0px 0px;
 	border-bottom: 1px solid #ECECEC;
-	border-radius: 4px;
 }
 
 .wxc-alert-info {
@@ -56,6 +63,7 @@ blockquote {
 	border-left: 5px solid #f75353;
 	line-height: 25px;
 	background: #F0F0F0;
+	border-radius: 4px;
 }
 
 a {
@@ -80,8 +88,49 @@ hr{
 	border-color: #bce8f1;
 	border-top: 1px solid #ECECEC;
 	color: #31708f;
-	margin: 10px 0px 20px 0px;
-	padding: 10px;
+	margin: 10px 0px 0px 0px;
+	padding: 20px 10px 20px 10px;
 	text-align: center;
 	font-size: 14px;
+}
+
+.blog .heading h2{
+	font-size:25px;
+	margin-bottom:12px;
+}	
+
+.blog .heading p{
+	margin-top:5px;
+}
+
+.blog .grid .item { 
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+
+.blog .grid .item .grid-entry{
+	overflow: hidden;
+	border-bottom: 1px solid #ECECEC;
+	padding: 0px 0px 20px 0px;
+}
+
+.blog .grid .item .grid-entry img{
+	max-width: 100%;
+	height: auto !important;
+	border-radius: 4px;
+}
+
+.sp{
+	line-height:25px;
+}
+
+.grid-img {
+	padding: 5px 0px 5px 0px;
+}
+
+.pager-squ {
+	padding: 10px 0px 10px 0px;
+	margin: 10px 0px 10px 0px;
+	text-align: center;
 }

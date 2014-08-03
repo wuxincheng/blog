@@ -18,6 +18,7 @@
 	.blog-post-main img {
 		max-width: 100%;
 		height: auto !important;
+		border-radius: 4px;
 	}
 </style>
 
@@ -27,7 +28,7 @@
 	<div class="container">
 		<div class="ya2dan-container">
 			<div class="blog-post-main">
-				<h2>${blogInfo.blogTitle}</h2>
+				<h3>${blogInfo.blogTitle}</h3>
           		<hr>
            		<div class="share-info">
 					${blogInfo.updateTime} &nbsp; | &nbsp;
@@ -41,37 +42,19 @@
            		<p>${blogInfo.blogContent}</p>
 			</div>
         </div>
-	</div>
-	
-	<div class="container">
-		<div class="wxc-alert-container">
+        
+        <div class="wxc-alert-container">
 			<div class="wxc-alert-info">
 				<strong>阅读提示：</strong>
 				亲爱的网友您好哇！您正在阅读《新成视野》移动版，
 				<a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}">
 					<strong>点击可查看完整网页版</strong>
 				</a>
-				，不过加载速度会有点慢哦！
+				！
 			</div>
 		</div>
-	</div>
-	
-	<div class="container">
-		<div class="footer-container">
-			<a href="http://wuxincheng.com.cn">
-				<img src="<%=request.getContextPath()%>/assets/img/wxc-pi.png" />
-			</a>
-			<p>
-				<a href="http://www.wuxincheng.com.cn">首页</a> | 
-				<a href="<%=request.getContextPath()%>/blog/detailMobile?blogId=${blogInfo.blogId}">移动版</a>
-				 | 
-				 <a href="<%=request.getContextPath()%>/blog/detail?blogId=${blogInfo.blogId}">网页版</a>
-			</p>
-			<p>
-				<a href="http://wuxincheng.com.cn">wuxincheng.com.cn</a><br>
-				© Copyright 2014 - All Rights Reserved.
-			</p>
-		</div>
+		
+		<jsp:include page="../footer_mobile.jsp" />
 	</div>
 </body>
 </html>
