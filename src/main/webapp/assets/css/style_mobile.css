@@ -59,20 +59,16 @@ blockquote {
 }
 
 a {
-	color: #777777;
-}
-
-a {
-	text-decoration: none;
-}
-
-a {
 	color: #428bca;
 	text-decoration: none;
 }
 
 a {
 	background: transparent;
+}
+
+a:hover {
+	color: #f75353;
 }
 
 hr{
