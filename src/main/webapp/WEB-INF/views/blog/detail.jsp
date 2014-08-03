@@ -80,7 +80,7 @@
 			<div class="wxc-alert-container">
 				<div class="wxc-alert-info" role="alert">
 					<strong>阅读提示：</strong>
-					网友您好！您正在阅读新成视野网页版，
+					亲爱的网友您好哇！您正在阅读《新成视野》网页版，
 					<a href="<%=request.getContextPath()%>/blog/detailMobile?blogId=${blogInfo.blogId}">
 						<strong>点击可查看移动版</strong>
 					</a>

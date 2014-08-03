@@ -1,0 +1,91 @@
+
+/** wuxincheng.com.cn detail mobile style */
+
+body{
+	font-family: Arial, 微软雅黑, Verdana, Geneva, Tahoma, 宋体, 'Open Sans', sans-serif;
+	background: #fff;
+	font-size: 16px;
+}
+
+p{
+	margin:0;
+	padding:0;
+	line-height: 28px;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.ya2dan-container {
+	
+}
+
+.wxc-alert-container {
+	padding: 0px 0px 0px 0px;
+	margin: 10px 0px 0px 0px;
+}
+
+.blog-post-main {
+	padding: 0px 0px 10px 0px;
+	margin: 0px 0px 0px 0px;
+	border-bottom: 1px solid #ECECEC;
+	border-radius: 4px;
+}
+
+.wxc-alert-info {
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+	color: #31708f;
+	border-radius: 4px;
+	padding: 8px 10px 8px 10px;
+	margin: 10px 0px 10px 0px;
+}
+
+.share-info {
+	padding: 0px 0px 10px 0px;
+	font-size: 14px;
+}
+
+blockquote {
+	padding: 10px 10px 10px 10px;
+	margin: 0 0 20px;
+	border-left: 5px solid #f75353;
+	line-height: 25px;
+	background: #F0F0F0;
+}
+
+a {
+	color: #777777;
+}
+
+a {
+	text-decoration: none;
+}
+
+a {
+	color: #428bca;
+	text-decoration: none;
+}
+
+a {
+	background: transparent;
+}
+
+hr{
+	border-top:0px;
+	border-bottom:1px solid #f8f8f8;
+}
+
+.footer-container {
+	border-color: #bce8f1;
+	border-top: 1px solid #ECECEC;
+	color: #31708f;
+	margin: 10px 0px 20px 0px;
+	padding: 10px;
+	text-align: center;
+	font-size: 14px;
+}
