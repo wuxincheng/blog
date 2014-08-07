@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 			
 		<!-- Footer start -->
-		<div class="container">
+		<div>
 			<div class="footer text-center">
 				<div>
 					Email：wuxinchenghappy@gmail.com / 

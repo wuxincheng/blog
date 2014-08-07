@@ -1440,10 +1440,11 @@ hr{
 /* Footer */
 .footer {
 	padding: 20px 10px 30px 10px;
-	border-top:1px solid #f5f5f5;
-    margin: 10px 5px 0px 5px;
+	border-top:1px solid #D4D0D0;
+    margin: 20px 0px 0px 0px;
     font-size: 12px;
     line-height: 28px;
+    background: #eeeeee;
 }
 
 .footer .footer-social{
@@ -1899,7 +1900,7 @@ hr{
 
 .blog-post {
 	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
+	margin: 0px 0px 10px 0px;
 }
 
 .blog-post-main {
@@ -2031,7 +2032,8 @@ hr{
 	padding: 10px 10px 10px 10px;
 	margin: 5px 5px 10px 5px;
 	font-size: 10px;
-	border-radius:0px;
+	border-radius:4px;
+	background: #eeeeee;
 }
 
 .link-info {
