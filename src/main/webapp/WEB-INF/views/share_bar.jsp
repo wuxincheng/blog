@@ -2,7 +2,7 @@
 
 <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style_24x24">
-	<span class="jiathis_txt">分享到：</span>
+	<span class="jiathis_txt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分享到：</span>
 	<a class="jiathis_button_googleplus"></a>
 	<a class="jiathis_button_fb"></a>
 	<a class="jiathis_button_twitter"></a>
