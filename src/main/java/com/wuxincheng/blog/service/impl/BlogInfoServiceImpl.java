@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
 import com.wuxincheng.blog.dao.BlogInfoDao;
 import com.wuxincheng.blog.model.BlogInfo;
 import com.wuxincheng.blog.service.BlogInfoService;
-import com.wuxincheng.blog.util.Constants;
-import com.wuxincheng.blog.util.Validation;
+import com.wuxincheng.comm.util.Constants;
+import com.wuxincheng.comm.util.Validation;
 
 /**
  * 博客信息

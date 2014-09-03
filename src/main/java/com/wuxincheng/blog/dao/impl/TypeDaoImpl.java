@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import com.wuxincheng.blog.dao.TypeDao;
 import com.wuxincheng.blog.model.Type;
+import com.wuxincheng.comm.dao.BaseDao;
 
 @Repository("typeDao")
 public class TypeDaoImpl extends BaseDao implements TypeDao {

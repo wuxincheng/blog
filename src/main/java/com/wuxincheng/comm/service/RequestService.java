@@ -1,6 +1,6 @@
-package com.wuxincheng.blog.service;
+package com.wuxincheng.comm.service;
 
-import com.wuxincheng.blog.model.Request;
+import com.wuxincheng.comm.model.Request;
 
 /**
  * 访问

@@ -1,19 +1,19 @@
-package com.wuxincheng.blog.util;
+package com.wuxincheng.comm.util;
 
 /**
- * 常量
+ * 系统常量
  * 
  * @author wuxincheng
- *
+ * 
  */
 public class Constants {
 
 	/** 博客 */
 	public static final String BLOG_MODE = "B";
-	
+
 	/** 导航Active常量 */
 	public static final String TOP_NAV_FLAG = "navFlag";
-	
+
 	/** 社交平台参数配置 */
 	/** Google+ */
 	public static final String SOCIAL_GOOGLE_PLUS = "google";
@@ -35,11 +35,11 @@ public class Constants {
 	public static final String SOCIAL_RENREN = "renren";
 	/** 百度贴吧 */
 	public static final String SOCIAL_TIEBA = "tieba";
-	/** 其它平台*/
+	/** 其它平台 */
 	public static final String SOCIAL_OTHER = "wuxincheng";
-	
+
 	/** 排序方式 */
 	public static final String ORDER_BY_DESC = "DESC";
 	public static final String ORDER_BY_ASC = "ASC";
-	
+
 }

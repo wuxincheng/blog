@@ -1,4 +1,4 @@
-package com.wuxincheng.blog.interceptor;
+package com.wuxincheng.comm.interceptor;
 
 import java.util.Map;
 import java.util.Map.Entry;
@@ -12,10 +12,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.wuxincheng.blog.model.Request;
-import com.wuxincheng.blog.service.RequestService;
-import com.wuxincheng.blog.util.Constants;
-import com.wuxincheng.blog.util.Validation;
+import com.wuxincheng.comm.model.Request;
+import com.wuxincheng.comm.service.RequestService;
+import com.wuxincheng.comm.util.Constants;
+import com.wuxincheng.comm.util.Validation;
 
 /**
  * 访问拦截器

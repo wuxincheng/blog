@@ -30,29 +30,11 @@
 							</li>
 						</ul>
 						
-						<ul class="nav navbar-nav" >
-							<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-							<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-							<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-							<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-							<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-							<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-						</ul>
-						
-						<ul class="nav navbar-nav" >
-							<li>
-							  <a href="#">
-							  	<img alt="" src="<%=request.getContextPath()%>/assets/img/wuxc.jpg" height="23px" width="23px" class="img-circle">
-							  </a>
-							</li>
-						</ul>
-						
-						<!-- 
 						<ul class="nav navbar-nav navbar-right">
+							<li <c:if test="${'message' eq navFlag}">class="active"</c:if>><a href="<%=request.getContextPath()%>/message/"><i class="fa fa-android"></i> 应用</a></li>
 							<li <c:if test="${'message' eq navFlag}">class="active"</c:if>><a href="<%=request.getContextPath()%>/message/"><i class="fa fa-envelope"></i> 留言</a></li>
 							<li <c:if test="${'about' eq navFlag}">class="active"</c:if>><a href="<%=request.getContextPath()%>/about/"><i class="fa fa-bell"></i> 关于</a></li>
 						</ul>
-						 -->
 					</div>
 				</div>
 			</nav>

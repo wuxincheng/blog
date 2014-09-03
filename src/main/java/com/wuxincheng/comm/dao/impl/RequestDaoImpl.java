@@ -1,9 +1,10 @@
-package com.wuxincheng.blog.dao.impl;
+package com.wuxincheng.comm.dao.impl;
 
 import org.springframework.stereotype.Repository;
 
-import com.wuxincheng.blog.dao.RequestDao;
-import com.wuxincheng.blog.model.Request;
+import com.wuxincheng.comm.dao.BaseDao;
+import com.wuxincheng.comm.dao.RequestDao;
+import com.wuxincheng.comm.model.Request;
 
 @Repository("requestDao")
 public class RequestDaoImpl extends BaseDao implements RequestDao {

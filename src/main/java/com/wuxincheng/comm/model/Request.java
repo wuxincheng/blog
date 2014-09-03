@@ -1,4 +1,4 @@
-package com.wuxincheng.blog.model;
+package com.wuxincheng.comm.model;
 
 import java.io.Serializable;
 

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.wuxincheng.blog.dao.BlogInfoDao;
 import com.wuxincheng.blog.model.BlogInfo;
+import com.wuxincheng.comm.dao.BaseDao;
 
 @Repository("blogInfoDao")
 public class BlogInfoDaoImpl extends BaseDao implements BlogInfoDao {

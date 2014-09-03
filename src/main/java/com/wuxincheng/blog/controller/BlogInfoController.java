@@ -19,8 +19,8 @@ import com.wuxincheng.blog.model.BlogInfo;
 import com.wuxincheng.blog.model.Type;
 import com.wuxincheng.blog.service.BlogInfoService;
 import com.wuxincheng.blog.service.TypeService;
-import com.wuxincheng.blog.util.Constants;
-import com.wuxincheng.blog.util.Validation;
+import com.wuxincheng.comm.util.Constants;
+import com.wuxincheng.comm.util.Validation;
 
 @Controller
 @RequestMapping("/blog")

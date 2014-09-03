@@ -6,7 +6,8 @@
 	
 	<sqlMap resource="com/wuxincheng/blog/model/BlogInfo.xml" />
 	<sqlMap resource="com/wuxincheng/blog/model/Type.xml" />
-	<sqlMap resource="com/wuxincheng/blog/model/Request.xml" />
+	
+	<sqlMap resource="com/wuxincheng/comm/model/Request.xml" />
 	
 	<!-- 
 	<sqlMap resource="com/wuxincheng/blog/model/User.xml" />

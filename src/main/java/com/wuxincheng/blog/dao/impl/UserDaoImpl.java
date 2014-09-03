@@ -4,6 +4,7 @@ import org.springframework.stereotype.Repository;
 
 import com.wuxincheng.blog.dao.UserDao;
 import com.wuxincheng.blog.model.User;
+import com.wuxincheng.comm.dao.BaseDao;
 
 @Repository("userDao")
 public class UserDaoImpl extends BaseDao implements UserDao {

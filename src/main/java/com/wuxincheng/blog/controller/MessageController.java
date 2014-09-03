@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.wuxincheng.blog.model.Message;
 import com.wuxincheng.blog.model.User;
 import com.wuxincheng.blog.service.MessageService;
-import com.wuxincheng.blog.util.Constants;
+import com.wuxincheng.comm.util.Constants;
 
 /**
  * 用户留言

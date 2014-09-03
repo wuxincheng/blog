@@ -1,4 +1,4 @@
-package com.wuxincheng.blog.util;
+package com.wuxincheng.comm.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

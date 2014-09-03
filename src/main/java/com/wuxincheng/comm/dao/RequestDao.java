@@ -1,6 +1,6 @@
-package com.wuxincheng.blog.dao;
+package com.wuxincheng.comm.dao;
 
-import com.wuxincheng.blog.model.Request;
+import com.wuxincheng.comm.model.Request;
 
 public interface RequestDao {
 
