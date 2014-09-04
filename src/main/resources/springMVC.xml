@@ -39,7 +39,7 @@
 			<mvc:exclude-mapping path="/assets/**"/>
 
 			<!-- 配置执行的拦截器 -->
-			<bean class="com.wuxincheng.comm.interceptor.RequestInterceptor"/>
+			<bean class="com.wuxincheng.web.interceptor.RequestInterceptor"/>
 		</mvc:interceptor>
 	</mvc:interceptors>
 
