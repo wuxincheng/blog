@@ -8,4 +8,6 @@ package com.wuxincheng.admins.batch;
  */
 public class RequestIPDetailBatch {
 
+	
+	
 }
