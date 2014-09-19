@@ -14,6 +14,11 @@
 <jsp:include page="base.jsp" />
 
 <style type="text/css">
+body {
+	/**
+	background: url('/assets/images/background/starry3.jpg') no-repeat center center fixed;
+	 */
+}
 </style>
 
 <script>
@@ -145,16 +150,14 @@
 			</div>
 		</div>
 		
-		<div class="container">
-			<div class="wxc-alert-container">
-				<div class="alert alert-warning" role="alert">
-					<strong>阅读提示：</strong>
-					亲爱的网友您好哇！您正在阅读《新成视野》网页版，
-					<a href="<%=request.getContextPath()%>/blog/mobileList">
-						<strong>点击可查看移动版</strong>
-					</a>
-					。
-				</div>
+		<div class="panel-alert-info">
+			<div class="container">
+				<strong>阅读提示：</strong>
+				亲爱的网友您好哇！您正在阅读《新成视野》网页版，
+				<a href="<%=request.getContextPath()%>/blog/mobileList">
+					<strong>点击可查看移动版</strong>
+				</a>
+				。
 			</div>
 		</div>
 		

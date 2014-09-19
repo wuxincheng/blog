@@ -1440,11 +1440,10 @@ hr{
 /* Footer */
 .footer {
 	padding: 20px 10px 30px 10px;
-	border-top:1px solid #D4D0D0;
-    margin: 20px 0px 0px 0px;
+    margin: 50px 0px 0px 0px;
     font-size: 12px;
     line-height: 28px;
-    background: #eeeeee;
+    background: #ededed;
 }
 
 .footer .footer-social{
@@ -2058,4 +2057,24 @@ hr{
 	margin: 55px 5px 10px 5px;
 	font-size: 10px;
 	line-height:40px !important;
+}
+
+.panel-alert-info {
+	background: #f75353 repeat;
+	padding: 50px 0px 50px 0px;
+	margin: 20px 0px 20px 0px;
+	color: #FFF;
+}
+
+.panel-alert-info a {
+	color: #F5ECEC;
+}
+
+.panel-alert-info a:hover{
+	text-decoration: none;
+}
+
+.panel-alert-info a:hover,a:active,a:focus {
+	outline: 0;
+	text-decoration: none;
 }

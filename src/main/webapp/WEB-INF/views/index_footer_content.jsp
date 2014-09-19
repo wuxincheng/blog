@@ -59,13 +59,11 @@
 			</div>
 		</div>
 		
-		<div class="container">
-			<div class="wxc-alert-container">
-				<div class="alert alert-danger" role="alert">
-					<strong>免责声明：</strong>
-					<a href="http://wuxincheng.com.cn">WUXINCHENG.COM.CN</a>，
-					即新成视野（原：新成博客）所有内容来源于互联网。如果本站部分内容侵犯您的权益，请您告知！
-				</div>
+		<div class="panel-alert-info">
+			<div class="container">
+				<strong>免责声明：</strong>
+				<a href="http://wuxincheng.com.cn">WUXINCHENG.COM.CN</a>，
+				即新成视野（原：新成博客）所有内容来源于互联网。如果本站部分内容侵犯您的权益，请您告知！
 			</div>
 		</div>
 		
